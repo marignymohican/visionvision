@@ -1,0 +1,5 @@
+#allthesongs .slideaway {
+    z-index: 5000;
+    width: 0;
+    background-color: #FFFFFF;
+}

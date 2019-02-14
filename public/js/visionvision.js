@@ -1,3 +1,5 @@
+
+
 $(document).ready(function() {
     // Initialize Firebase
     const fbconfig = {
@@ -75,25 +77,31 @@ $(document).ready(function() {
             console.log('constructing the song chooser');
             pdata.forEach(function(part) {
                 
-                // get this year's participants
-                $('#allthesongs').append('<li>' + new songcontainer(part.val(),vv_year).sc() + '</li>');
-                // make them all alphabetical-like
+                let sc = $('<li />');
+                sc.append( new songcontainer(part.val(),vv_year).sc() );
+                sc.on('click',() => {
+                    addsong(sc,pointsto);
+                });
                 
-                $('#allthesongs li').sort(function(a,b) {
-                    var va = $(a).find('.songcontainer').eq(0).attr('id'),
-                        vb = $(b).find('.songcontainer').eq(0).attr('id');
-                    if ( va > vb ) { return 1; }
-                    if ( va < vb ) { return -1; }
-                    return 0;
-                }).appendTo('#allthesongs');
+                $('#allthesongs').append(sc);
             });
+            
+            $('#allthesongs li').sort(function(a,b) {
+                var va = $(a).find('.songcontainer').eq(0).attr('id'),
+                    vb = $(b).find('.songcontainer').eq(0).attr('id');
+                if ( va > vb ) { return 1; }
+                if ( va < vb ) { return -1; }
+                return 0;
+            }).appendTo('#allthesongs');
+            
+
         }).then(function() {
             // this is the part to remember when folk may have already submitted votes
             dbMyVotes.child(votingtoken).once('value',function(myData) {
                 myvotes = myData.val();
             }).then(function() {
                 if ( myvotes ) {
-                    console.log('adding previous votes to the my leaderboard');
+                    console.log('adding previous votes to my leaderboard');
                     myvotes.forEach(function(myData) {
                         let place = '#vv_place_' + myData.points;
                         let sc = '#sc_' + myData.name.toLowerCase().replace(/ /g,'_');
@@ -165,42 +173,16 @@ $(document).ready(function() {
             $('#overlay #whatisthis').addClass('notvisible');
         }
         
-        $('body').addClass('noscroll');
         $('#overlay').fadeIn(500, function() {
             $('#allthesongs').scrollTop(0);
         });
     });
-
-    // add a song to your leaderboard
-    $('#overlay').on('click', '.songcontainer', function() {
-        var chosen = $(this).clone();
-        
-        // only add a song to the leaderboard once
-        $('#chooseUr10 li').each(function() {
-            if ( $(this).find('.myvotes .songcontainer').attr('id') == chosen.attr('id') ) {
-                $(this).find('.myvotes .vv_info').html('Select a song!');
-            }
-        });
-        
-        // check for full leaderboard display
-        if ( !$('#toggle_leaders').hasClass('myvotes') ) {
-            chosen.find('.song').css({'display': 'none'});
-            chosen.find('.flag').css({'width': '100%'});
-        }
-        
-        $(pointsto).find('.myvotes .vv_info').html(chosen);
-        
-        $('body').removeClass('noscroll');
-        $('#overlay').fadeOut(500);
-    });
-
+    
     // submit your vote(s)
     $('#myvotes').on('click','#submitvote', function() {
         let votingData = [];
         
         $('#chooseUr10 li').each(function() {
-            console.log($(this).find('.songcontainer'));
-            
             if ( $(this).find('.myvotes .songcontainer').length ) {
                 votingData.push({
                     "name": $(this).find('.myvotes .songcontainer').attr('id').replace(/sc_/,''),
@@ -227,18 +209,11 @@ $(document).ready(function() {
     // clear just this vote
     $('#overlay').on('click', '.clearthis', function() {
         $(pointsto).find('.vv_info').html('<span class="sAs">Select a song!</span>');
-        
-        $('body').removeClass('noscroll');
         $('#overlay').fadeOut(500);
     });
 
     // just close the darn overlay!!!
     $('#overlay').on('click', '.cw', function() {
-        $('body').removeClass('noscroll');
-        $('#overlay').fadeOut(500);
-    });
-    $('#overlay').on('click', function() {
-        $('body').removeClass('noscroll');
         $('#overlay').fadeOut(500);
     });
 
@@ -260,8 +235,10 @@ $(document).ready(function() {
     $('nav').on('click', '#toggle_leaders', function() {
         // dbMyVotes
 
+        // show the full leaderboard
         if ( $(this).hasClass('myvotes') ) {
             $(this).removeClass('myvotes').text('Hide the Leaderboard');
+            $('#chooseUr10').addClass('allvotes');
             
             dbMyVotes.on('value', (data) => venueLeaders(data) );
 
@@ -285,8 +262,11 @@ $(document).ready(function() {
             }, 1000);
             
             $('#chooseUr10 .songcontainer .song').fadeOut(500);
+        
+        // hide the full leaderboard
         } else {
             $(this).addClass('myvotes').text('View the Leaderboard');
+            $('#chooseUr10').removeClass('allvotes');
             
             dbMyVotes.off();
             

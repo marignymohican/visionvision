@@ -45,6 +45,7 @@ h2 {
 
 /* overlay window for messages and voting */
 #overlay {
+    z-index: 1000;
     display: none;
     position: fixed;
     top: 0;
@@ -61,6 +62,9 @@ h2 {
 }
 #overlay #overlay_content #allthesongs {
     list-style-type: none;
+}
+#overlay #overlay_content #allthesongs li {
+    position: relative;
 }
 #overlay #overlay_content #whatisthis {
     height: 100vh;
@@ -244,6 +248,9 @@ h2 {
     background-size: contain;
     color: #000;
     text-shadow: 1px 1px #FFF, -1px 1px #FFF, -1px -1px #FFF, 1px -1px #FFF; 
+}
+#myvotes .vv_info {
+    position: relative;
 }
 .song {
     color: #000;
