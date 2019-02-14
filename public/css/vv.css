@@ -1,0 +1,363 @@
+*, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1em;
+    font-family: Rubik,sans-serif;
+}
+body { /* default colors below refer to 2018 branding */
+    position: relative;
+    /*min-width: 100vw;*/
+    min-height: 100vh;
+    background-attachment: fixed;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a2e9ed+0,25ccd5+100 */
+    background: #a2e9ed; /* Old browsers */
+    background: -moz-linear-gradient(top, #a2e9ed 0%, #25ccd5 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #a2e9ed 0%,#25ccd5 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #a2e9ed 0%,#25ccd5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a2e9ed', endColorstr='#25ccd5',GradientType=0 ); /* IE6-9 */
+}
+h1 {
+    display: inline-block;
+    margin: 0 auto;
+    font-size: 3em;
+}
+h2 {
+    font-size: 2em;
+}
+.noscroll {
+    overflow: hidden;
+}
+
+/* START branding and color information by year (default is 2018) */
+/* 2019 Tel Aviv */
+.color2019 {
+    background-color: #0c1330;
+}
+.color2019-grad {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#022957+0,022957+100&1+0,0.1+100 */
+    background: -moz-linear-gradient(top, rgba(2,41,87,1) 0%, rgba(2,41,87,0.1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(2,41,87,1) 0%,rgba(2,41,87,0.1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(2,41,87,1) 0%,rgba(2,41,87,0.1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#022957', endColorstr='#1a022957',GradientType=0 ); /* IE6-9 */
+}
+/* END branding and color */
+
+/* overlay window for messages and voting */
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(50,50,50,0.5);
+    text-align: center;
+}
+#overlay #overlay_content {
+    margin: 0 auto;
+    max-width: 500px;
+    background: #FFFFFF;
+}
+#overlay #overlay_content #allthesongs {
+    list-style-type: none;
+}
+#overlay #overlay_content #whatisthis {
+    height: 100vh;
+}
+#overlay #overlay_content #whatisthis .sc_actions {
+    padding-bottom: 8px;
+}
+#overlay #overlay_content #whatisthis .content {
+    overflow: scroll;
+    padding: 0 10px;
+    height: calc(100vh - 40px);
+}
+#overlay #overlay_content #whatisthis p,
+#overlay #overlay_content #whatisthis ul,
+#overlay #overlay_content #whatisthis li {
+    margin-bottom: 1.5em;
+    text-align: left;
+}
+#overlay #overlay_content #whatisthis ul ul,
+#overlay #overlay_content #whatisthis ul ul li {
+    margin-top: 0.4em;
+    margin-bottom: 0.4em;
+    font-size: 0.9em;
+}
+#overlay #overlay_content #whatisthis ul {
+    margin-left: 1.5em;
+}
+#overlay #overlay_content #whatisthis h4 {
+    margin-bottom: 0.8em;
+    font-size: 1.5em;
+    text-align: left;
+}
+#overlay #overlay_content #whatisthis hr {
+    margin: 30px 0;
+}
+#overlay #overlay_content #whatisthis .smaller {
+    margin: 0.5em 0;
+    display: block;
+    font-size: 0.7em;
+}
+#overlay #overlay_content .notvisible {
+    display: none;
+}
+
+
+
+#header {
+    margin: 0 auto 20px;
+    padding: 0;
+    border-radius: 0 0 4px 4px;
+    max-width: 500px;
+    background-color: rgba(200,200,200,0.5);
+    text-align: center;
+}
+#header h2 {
+    display: flex;
+    margin-bottom: 5px;
+    height: 1.5em;
+}
+#header h2 > div {
+    flex-grow: 1;
+}
+#header h2 .littletext {
+    display: inline-block;
+    padding-right: 8px;
+    font-size: 0.4em;
+    text-align: right;
+    line-height: 4em;
+}
+#header h2 #ev_logo {
+    display: inline-block;
+    height: 100%;
+    text-align: left;
+}
+#header h2 #ev_logo img {
+    height: 100%;
+}
+
+#header nav ul {
+    display: flex;
+    list-style-type: none;
+}
+#header nav ul li {
+    display: inline-block;
+    padding: 5px 0 5px;
+    flex-grow: 1;
+    background-color: #022957;
+    color: #DDD;
+    border: 1px solid #AAA;
+}
+#header nav ul li:hover {
+    background-color: #526D8C;
+    color: white;
+}
+#header nav ul li:active {
+    color: #BBB;
+}
+#header nav ul li:first-child {
+    border-radius: 0 0 0 8px;
+}
+#header nav ul li:last-child {
+    border-radius: 0 0 8px 0;
+}
+#main {
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+
+/* initially hide the full venue vote column */
+.votingpanel {
+    display: none;
+    margin: 20px 0 50px;
+}
+/* end this section */
+
+
+/* -=-=-=-=- LEADERBOARD STYLES -=-=-=-=- */
+#chooseUr10 {
+    margin: 25px 0;
+    list-style-type: none;
+}
+#chooseUr10 li {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+    height: 75px;
+}
+#chooseUr10 .chooseasong {
+    display: flex;
+    border: 2px solid #022957;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+#chooseUr10 .myvotes {
+    width: 100%;
+}
+#chooseUr10 .venuevotes,
+#chooseUr10 .venuevotes .vv_place,
+#chooseUr10 .venuevotes .vv_info {
+    margin: 0;
+    border-width: 0;
+    width: 0;
+}
+
+#chooseUr10 .chooseasong .thissong {
+    display: flex;
+    width: 100%;
+}
+#chooseUr10 .chooseasong .thissong .vv_place {
+    display: inline-block;
+    flex-shrink: 0;
+    padding-top: 0.6em;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,dbe079+100 */
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #dbe079 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #ffffff 0%,#dbe079 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #ffffff 0%,#dbe079 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dbe079',GradientType=0 ); /* IE6-9 */;
+    width: 60px;
+    height: 100%;
+    vertical-align: middle;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;  
+}
+#chooseUr10 .chooseasong .thissong .vv_place::after {
+    display: block;
+    content: 'points';
+    font-size: 0.4em;
+    line-height: 0.5em;
+}
+#myvotes #chooseUr10 li:last-child .vv_place::after {
+    content: 'point';
+}
+.vv_info {
+    flex-grow: 2;
+    display: inline-block;
+    background: url('../img/daretodream_logo_100.png') #0c1330 no-repeat center center;
+    background-size: contain;
+    color: #000;
+    text-shadow: 1px 1px #FFF, -1px 1px #FFF, -1px -1px #FFF, 1px -1px #FFF; 
+}
+.song {
+    color: #000;
+    text-shadow: 1px 1px #FFF, -1px 1px #FFF, -1px -1px #FFF, 1px -1px #FFF;    
+}
+.song h3 {
+    margin-top: 5px;
+    font-size: 1.5em;
+}
+.sAs {
+    line-height: 4em;
+}
+
+/* -=-=-=- The Song Container -=-=-=- */
+.songcontainer {
+    display: flex;
+    border: none;
+    height: 100%;
+    color: #000000;
+}
+.songcontainer .flag,
+.venuevotes .flag {
+    position: relative;
+    flex-shrink: 0;
+    display: inline-block;
+    overflow: hidden;
+    height: 100%;
+    width: 100px;
+    text-align: center;
+    vertical-align: top;
+}
+.venuevotes .flag {
+    width: 100%;
+    text-transform: capitalize;
+}
+.songcontainer .flag img,
+.venuevotes .flag img {
+    width: 100%;
+    height: 100%;
+}
+#songchooser #allthesongs li .flag {
+    width: 120px;
+}
+.songcontainer .flag .f_text,
+.venuevotes .flag .f_text {
+    display: inline-block;
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    width: 100%;
+    font-size: 0.85em;
+    text-shadow: none;
+    background-color: rgba(33, 51, 104, 0.5);
+    color: #FFFFFF;
+}
+.songcontainer .song {
+    flex-grow: 2;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* -=-=-=- song chooser panel -=-=-=- */
+#songchooser .sc_actions {
+    display: flex;
+    padding-top: 10px;
+    height: 100px;
+}
+#songchooser #allthesongs {
+    overflow: scroll;
+    height: calc(100vh - 100px);
+}
+#songchooser #allthesongs li {
+    margin-bottom: 0.5em;
+    height: 90px;
+}
+
+/* -=-=-=- voting buttons -=-=-=- */
+.vv_button {
+    display: block;
+    margin: 0 auto;
+    padding: 4px 20px;
+    max-height: 1.85em;
+    border: 1px solid #DDB932;
+    outline: none;
+    background-color: #FFC901;
+    font-size: 1.15em;
+    font-weight: bold;
+    border-radius: 10px;
+}
+.vv_button:hover {
+    background-color: #ffe27c;
+}
+.vv_button:active {
+    border: 1px solid #FFC901;
+    background-color: #DDB932;
+}
+.vv_button#submitvote {
+    font-size: 2em;
+}
+.vv_button#clearleaderboard {
+    margin-top: 15px;
+    font-size: 0.8em;
+}
+.vv_button.clearthis {
+    flex-grow: 2;
+    margin: 0 10px;
+}
+.vv_button.cw {
+    margin-right: 10px;
+    padding: 4px 0.6em;
+    max-width: 1.85em;
+}
+#viewmine,
+#viewleaders {
+    margin-bottom: 0.85em;
+}
