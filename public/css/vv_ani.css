@@ -1,0 +1,33 @@
+@keyframes glowpulse {
+    0% {
+        box-shadow: 0 0 0 #FFF;
+    }
+    50% {
+        box-shadow: 0 0 20px #FFF;
+    }
+    100% {
+        box-shadow: 0 0 0 #FFF;
+    }
+}
+.songadded {
+    animation: glowpulse 1s ease-out 1.5s;
+}
+
+@keyframes slideaway {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+.slideaway {
+    position: absolute;
+    height: 100%;
+}
+#allthesongs .doslide {
+    animation: slideaway 0.5s ease-in forwards;
+}
+#myvotes .doslide {
+    animation: slideaway 0.5s ease-in forwards reverse;
+}

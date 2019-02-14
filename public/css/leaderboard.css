@@ -1,0 +1,13 @@
+#chooseUr10 .allvotes .song {
+    display: none;
+}
+#chooseUr10 .allvotes .flag {
+    width: 100%;
+}
+
+#chooseUr10 .slideaway {
+    z-index: 500;
+    right: 0;
+    width: 100%;
+    background-color: #0c1330;
+}
