@@ -9,7 +9,10 @@
 /craptastic
 /public/craptastic
 /public/css/pre-git
-/public/img/
+/public/img/*.*
+/public/img/Eurovision*
+/public/img/participants/2018
+/public/img/participants/2019/working
 /public/js/pre-git
 
 /py

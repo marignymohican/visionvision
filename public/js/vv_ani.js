@@ -15,16 +15,14 @@ function addsong(song,target) {
     $(song).prepend(slideaway);
     slideaway.addClass('doslide');
     $('#overlay').delay(400).fadeOut(500, () => {
-        $('body').removeClass('noscroll');
-        
         slideaway.removeClass('doslide');
-        $(target + ' .vv_info').html(slideaway);
+        $(target + ' .myvotes .vv_info').html(slideaway);
         
-        $(target + ' .vv_info').append(chosen);
-        $(target + ' .vv_info .slideaway').addClass('doslide');
+        $(target + ' .myvotes .vv_info').append(chosen);
+        $(target + ' .myvotes .vv_info .slideaway').addClass('doslide');
     });
 
-    $(target).addClass('songadded');
+    $(target + ' .myvotes').addClass('songadded');
 }
 
 // get document coordinates of the element

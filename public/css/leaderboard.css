@@ -1,7 +1,7 @@
-#chooseUr10 .allvotes .song {
+.allvotes .song {
     display: none;
 }
-#chooseUr10 .allvotes .flag {
+.allvotes .flag {
     width: 100%;
 }
 

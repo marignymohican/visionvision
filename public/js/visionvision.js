@@ -1,5 +1,3 @@
-
-
 $(document).ready(function() {
     // Initialize Firebase
     const fbconfig = {
@@ -11,6 +9,12 @@ $(document).ready(function() {
         messagingSenderId: "821274017742"
     };
     firebase.initializeApp(fbconfig);
+    
+    const voting = {};
+    voting.whatyear = firebase.database().ref('/config/year');
+    voting.participants = firebase.database().ref('/participants');
+    voting.myvotes = firebase.database().ref('/voting_venues/mimis/votes');
+    voting.token = false;
     
     const whatyearisit = firebase.database().ref('/config/year');
     const dbParticipants = firebase.database().ref('/participants');
