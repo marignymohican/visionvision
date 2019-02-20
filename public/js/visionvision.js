@@ -45,7 +45,7 @@ $(document).ready(function() {
                         <img src="./img/flags/${this.sName}.png" />
                         <div class="f_text">${this.name}</div>
                     </div>
-                    <div class="song" style="background-image: url(./img/participants/${year}/${this.sName}.jpg);">
+                    <div class="song" style="background-image: url('https://rayknola.com/visionvision/public/img/participants/${year}/${this.sName}_sc.jpg);">
                         ${this.song()}
                         ${this.language()}
                         ${this.artist()}
