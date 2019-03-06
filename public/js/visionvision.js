@@ -24,7 +24,7 @@ $(document).ready(function() {
     let myvotes = [];
     const songcontainer = function(sc_data,year) {
         this.name = sc_data.name;
-        this.sName = sc_data.name.toLowerCase().replace(/ /g,'_').replace(/\./g,'').replace(/the /g,'');
+        this.sName = sc_data.name.toLowerCase().replace(/the /,'').replace(/ /g,'_').replace(/\./g,'');
         this.song = function() {
             if ( sc_data[year].song ) { return '<h3>' + sc_data[year].song + '</h3>'; }
             else { return ''; }
@@ -45,7 +45,7 @@ $(document).ready(function() {
                         <img src="./img/flags/${this.sName}.png" />
                         <div class="f_text">${this.name}</div>
                     </div>
-                    <div class="song" style="background-image: url('https://rayknola.com/visionvision/public/img/participants/${year}/${this.sName}_sc.jpg);">
+                    <div class="song" style="background-image: url('https://rayknola.com/visionvision/public/img/participants/${year}/${this.sName}_sc.jpg');">
                         ${this.song()}
                         ${this.language()}
                         ${this.artist()}

@@ -5,6 +5,8 @@
 .komodotools
 *.sql
 /*.json
+*.log
+*.txt
 
 /craptastic
 /public/craptastic
