@@ -16,7 +16,6 @@
     <script src="js/vv_ani.js"></script>
 </head>
 <body class="color2019-grad">
-    <!-- i made a change -->
     <div id="header">
         <h1>Vision Vision</h1>
         <h2>
@@ -27,29 +26,25 @@
         </h2>
         <nav>
             <ul>
+                <li id="meet_participants">Meet this year's participants</li>
+            </ul>
+            <ul>
                 <li id="toggle_leaders" class="myvotes">View the Leaderboard</li>
                 <li id="whatisthis">What is all this?</li>
             </ul>
         </nav>
     </div>
     <div id="main">
-
-        <!-- Display the local leader board -->
-        <div id="allvotes" class="votingpanel">           
-            <h2>Current Leaderboard</h2>
-            <p>Results below are calculated in real-time across all participants at all venues.</p>
-            <p>Final scores will be displayed after the hosts have called for a stop to voting and all votes have been tabulated.</p>
-            <ul id="allLeaders">
-                <li>There's nothing to see here right now. I havent built this bit yet.</li>
-            </ul>
-        </div>
-        
         <!-- europe! start voting now! -->
         <div id="myvotes" class="votingpanel">
             <h2>Choose your top 10!</h2>
-            <p>Select your favorite 10 songs below to assign points.</p>
-            <p>12 Points (douze points) to your most favorite, 10 the next most, 8 to the next, etc etc.</p>
-            <p></p>
+            <ul>
+                <li>12 points (douze points) to your most favorite</li>
+                <li>10 points to your second favorite</li>
+                <li>8 points to your third favorite</li>
+                <li>etc etc all the way down</li>
+            </ul>
+
             <ul id="chooseUr10">
                 <li id="vv_place_12">
                     <div class="chooseasong myvotes">
@@ -202,6 +197,14 @@
     <div id="footer"></div>
     <div id="overlay">
         <div id="overlay_content">
+            <div id="meet_participants" class="notvisible">
+                <div class="sc_actions">
+                    <div class="cw vv_button">x</div>
+                </div>
+                <div class="content">
+                    <p>this is the list of participant info!</p>
+                </div>
+            </div>
             <div id="whatisthis" class="notvisible">
                 <div class="sc_actions">
                     <div class="cw vv_button">x</div>
