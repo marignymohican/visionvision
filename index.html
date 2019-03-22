@@ -1,0 +1,266 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vision Vision</title>
+    <meta type="description" content="New Orleans decides the winner of the Eurovision Song Contest">
+    
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,700&amp;subset=cyrillic,hebrew,latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="css/vv.css" />
+    <link rel="stylesheet" href="css/vv_ani.css" />
+    <link rel="stylesheet" href="css/leaderboard.css" />
+    <link rel="stylesheet" href="css/songchooser.css" />
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/visionvision.js"></script>
+    <script src="js/vv_ani.js"></script>
+</head>
+<body class="color2019-grad">
+    <!-- i made a change, i did it again -->
+    <div id="header">
+        <h1>Vision Vision</h1>
+        <h2>
+            <div class="littletext">New Orleans has its say in the</div>
+            <div id="ev_logo">
+                <img src="img/Eurovision_TelAviv2019_logo/PNG/Eurovision_TelAviv2019_Logo_Black.png" />
+            </div>
+        </h2>
+        <nav>
+            <ul>
+                <li id="toggle_leaders" class="myvotes">View the Leaderboard</li>
+                <li id="whatisthis">What is all this?</li>
+            </ul>
+        </nav>
+    </div>
+    <div id="main">
+
+        <!-- Display the local leader board -->
+        <div id="allvotes" class="votingpanel">           
+            <h2>Current Leaderboard</h2>
+            <p>Results below are calculated in real-time across all participants at all venues.</p>
+            <p>Final scores will be displayed after the hosts have called for a stop to voting and all votes have been tabulated.</p>
+            <ul id="allLeaders">
+                <li>There's nothing to see here right now. I havent built this bit yet.</li>
+            </ul>
+        </div>
+        
+        <!-- europe! start voting now! -->
+        <div id="myvotes" class="votingpanel">
+            <h2>Choose your top 10!</h2>
+            <p>Select your favorite 10 songs below to assign points.</p>
+            <p>12 Points (douze points) to your most favorite, 10 the next most, 8 to the next, etc etc.</p>
+            <p></p>
+            <ul id="chooseUr10">
+                <li id="vv_place_12">
+                    <div class="chooseasong myvotes">
+                        <div class="thissong">
+                            <div class="vv_place">12</div>
+                            <div class="vv_info"><span class="sAs">Select a song!</span></div>
+                        </div>
+                    </div>
+                    <div class="chooseasong venuevotes hidden">
+                        <div class="thissong">
+                            <div class="vv_place"></div>
+                            <div class="vv_info songcontainer"></div>
+                        </div>
+                    </div>
+                </li>
+                <li id="vv_place_10">
+                    <div class="chooseasong myvotes">
+                        <div class="thissong">
+                            <div class="vv_place">10</div>
+                            <div class="vv_info"><span class="sAs">Select a song!</span></div>
+                        </div>
+                    </div>
+                    <div class="chooseasong venuevotes hidden">
+                        <div class="thissong">
+                            <div class="vv_place"></div>
+                            <div class="vv_info songcontainer"></div>
+                        </div>
+                     </div>
+                </li>
+                <li id="vv_place_8">
+                    <div class="chooseasong myvotes">
+                        <div class="thissong">
+                            <div class="vv_place">8</div>
+                            <div class="vv_info"><span class="sAs">Select a song!</span></div>
+                        </div>
+                    </div>
+                    <div class="chooseasong venuevotes hidden">
+                        <div class="thissong">
+                            <div class="vv_place"></div>
+                            <div class="vv_info songcontainer"></div>
+                        </div>
+                     </div>
+                </li>
+                <li id="vv_place_7">
+                    <div class="chooseasong myvotes">
+                        <div class="thissong">
+                            <div class="vv_place">7</div>
+                            <div class="vv_info"><span class="sAs">Select a song!</span></div>
+                        </div>
+                    </div>
+                    <div class="chooseasong venuevotes hidden">
+                        <div class="thissong">
+                            <div class="vv_place"></div>
+                            <div class="vv_info songcontainer"></div>
+                        </div>
+                     </div>
+                </li>
+                <li id="vv_place_6">
+                    <div class="chooseasong myvotes">
+                        <div class="thissong">
+                            <div class="vv_place">6</div>
+                            <div class="vv_info"><span class="sAs">Select a song!</span></div>
+                        </div>
+                    </div>
+                    <div class="chooseasong venuevotes hidden">
+                        <div class="thissong">
+                            <div class="vv_place"></div>
+                            <div class="vv_info songcontainer"></div>
+                        </div>
+                     </div>
+                </li>
+                <li id="vv_place_5">
+                    <div class="chooseasong myvotes">
+                        <div class="thissong">
+                            <div class="vv_place">5</div>
+                            <div class="vv_info"><span class="sAs">Select a song!</span></div>
+                        </div>
+                    </div>
+                    <div class="chooseasong venuevotes hidden">
+                        <div class="thissong">
+                            <div class="vv_place"></div>
+                            <div class="vv_info songcontainer"></div>
+                        </div>
+                     </div>
+                </li>
+                <li id="vv_place_4">
+                    <div class="chooseasong myvotes">
+                        <div class="thissong">
+                            <div class="vv_place">4</div>
+                            <div class="vv_info"><span class="sAs">Select a song!</span></div>
+                        </div>
+                    </div>
+                    <div class="chooseasong venuevotes hidden">
+                        <div class="thissong">
+                            <div class="vv_place"></div>
+                            <div class="vv_info songcontainer"></div>
+                        </div>
+                     </div>
+                </li>
+                <li id="vv_place_3">
+                    <div class="chooseasong myvotes">
+                        <div class="thissong">
+                            <div class="vv_place">3</div>
+                            <div class="vv_info"><span class="sAs">Select a song!</span></div>
+                        </div>
+                    </div>
+                    <div class="chooseasong venuevotes hidden">
+                        <div class="thissong">
+                            <div class="vv_place"></div>
+                            <div class="vv_info songcontainer"></div>
+                        </div>
+                     </div>
+                </li>
+                <li id="vv_place_2">
+                    <div class="chooseasong myvotes">
+                        <div class="thissong">
+                            <div class="vv_place">2</div>
+                            <div class="vv_info"><span class="sAs">Select a song!</span></div>
+                        </div>
+                    </div>
+                    <div class="chooseasong venuevotes hidden">
+                         <div class="thissong">
+                            <div class="vv_place"></div>
+                            <div class="vv_info songcontainer"></div>
+                        </div>
+                    </div>
+                </li>
+                <li id="vv_place_1">
+                    <div class="chooseasong myvotes">
+                        <div class="thissong">
+                            <div class="vv_place">1</div>
+                            <div class="vv_info"><span class="sAs">Select a song!</span></div>
+                        </div>
+                    </div>
+                    <div class="chooseasong venuevotes hidden">
+                        <div class="thissong">
+                            <div class="vv_place"></div>
+                            <div class="vv_info songcontainer"></div>
+                        </div>
+                     </div>
+                </li>
+            </ul>
+            <button id="submitvote" class="vv_button">Submit Your Vote</button>
+            <button id="clearleaderboard" class="vv_button">Clear your Leaderboard</button>
+        </div>
+        
+        <!-- europe! stop voting! -->
+        <div id="voting_after" class="votingpanel"></div>
+    </div>
+    <div id="footer"></div>
+    <div id="overlay">
+        <div id="overlay_content">
+            <div id="whatisthis" class="notvisible">
+                <div class="sc_actions">
+                    <div class="cw vv_button">x</div>
+                </div>
+                <div class="content">
+                    <h2>What's this all about?</h2>
+                    <p>The Eurovision Song Contest (ESC or just Eurovision) is a yearly, international song competition between members of the European Broadcasting Union. Each broadcaster internally chooses both a song and a performer to send to Eurovision, typically by a professional jury or a televised public vote (or both). <span class="smaller">More from <a href="https://eurovision.tv/history/in-a-nutshell" target="_blank">eurovision.tv</a></span></p>
+                    <p>Since voting in the Contest is only available to viewers in participating member countries, I've built this little application to allow fans in non-EBU nations to be able to hold their own, unofficial vote.</p>
+                    <h3>Its all for fun, folk! Numbers in this app are in no way connected to, nor will they reflect officially cast votes.</h3>
+                    <hr>
+                    
+                    <div class="about_panel">
+                        <h4>About this application</h4>
+                        <ul>
+                            <li>what it do?</li>
+                            <li>how does it work?</li>
+                        </ul>
+                    </div>
+
+                    <div class="about_panel">
+                        <h4>More about Eurovision \/</h4>
+                        <ul>
+                            <li>The first Eurovision Song Contest was held in 1956 between 7 nations.</li>
+                            <li>The Contest is (typically) hosted/broadcast/produced by the broadcaster from previous year's winner's country. <span class="smaller">The 2019 contest is in Tel Aviv and produced by <a href="https://www.kan.org.il/" target="_blank">KAN</a> as Israel won in 2018.</span></li>
+                            <li>In 2019, participants from 42 national broadcasters will perform. Two semi-finals are held to whittle the number of songs down to 26.
+                                <ul>
+                                    <li>The 10 entries with the most points from each semi advance to the Grand Final.</li>
+                                    <li>5 entries (The Big Five) perform in the semis, but automatically advance to the Grand Final.</li>
+                                    <li>The performer from the previous year's winning nation automatically advances to the Grand Final.</li>
+                                </ul>
+                            </li>
+                            <li>The Big Five are France, Germany, Italy, Spain, and the United Kingdom. General wisdom says they get a free pass to the grand final as they foot the lion's share of the funding for the entire show.</li>
+                            <li><a href="https://en.wikipedia.org/wiki/List_of_languages_in_the_Eurovision_Song_Contest#Rule_changes" target="_blank">There is (currently) no "official" language to songs in Eurovision</a>
+                                <ul>
+                                    <li>Previous years did have language restrictions</li>
+                                    <li>Many songs feature multiple languages</li>
+                                    <li>Some songs have been sung in fictional languages</li>
+                                    <li>Yes, English is a popular choice in Eurovision</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+            <div id="songchooser">
+                <div class="sc_actions">
+                    <!-- <div class="moreinfo">Giving <span id="sc_givepoints"></span> points to:</div>-->
+                    <div class="clearthis vv_button">Clear&nbsp;this&nbsp;selection</div>
+                    <div class="cw vv_button">x</div>
+                </div>
+                <ul id="allthesongs"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase-database.js"></script>
+</body>
+</html>
