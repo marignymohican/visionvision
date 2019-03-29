@@ -184,7 +184,7 @@ for p in eutvparticipants:
             dbParti.push(participant)
             slack = requests.post('https://hooks.slack.com/services/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', data = json.dumps({'text': participant['name'] + ' has been added to the leaderboard!'}), headers = slackHeaders)
 
-        done with this participant
+        # done with this participant
         print(participant)
         print('-=-=-=-=-')
         print(' ')
