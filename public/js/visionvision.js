@@ -221,6 +221,9 @@ $(document).ready(function() {
         $('#overlay').fadeOut(500);
     });
 
+    
+// display info pages
+    
     // view more info on the eurovision
     $('nav').on('click', '#whatisthis', function() {
         
@@ -232,8 +235,21 @@ $(document).ready(function() {
         $('#overlay').fadeIn(500, function() {
             $('#allthesongs').scrollTop(0);
         });
-        
     });
+    
+    // view more info on the participants
+    $('nav').on('click', '#meet_participants', function() {
+        alert('poop!');
+        if ( $('#overlay #meet_participants').hasClass('notvisible') ) {
+            $('#overlay #meet_participants').removeClass('notvisible');
+            $('#overlay #songchooser').addClass('notvisible');
+        }
+        $('body').addClass('noscroll');
+        $('#overlay').fadeIn(500, function() {
+            $('#allthesongs').scrollTop(0);
+        });
+    });
+// display info pages
 
     // view the full leaderboard
     $('nav').on('click', '#toggle_leaders', function() {
