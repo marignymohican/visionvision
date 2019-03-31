@@ -12,7 +12,7 @@ import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import db
 
-cred = credentials.Certificate('firebase.service.account.json')
+cred = credentials.Certificate('work/visionvision-3af1d-firebase-adminsdk-z8evb-49eb93be14.json')
 default_app = firebase_admin.initialize_app(cred)
 
 #firebase_admin.db.Reference(**kwargs)
@@ -131,19 +131,12 @@ for p in eutvparticipants:
                     
                     # overwrite the local one
                     makethumbnail(locImg, hotImg.content)
-                
-                
-                
-                
-                
-                
-                
+
             else:
                 # file doesnt yet exist
                 print('i dont have a photo for ' + participant[escyear]['artist'])
-                
-              
-                
+                makethumbnail(locImg, requests.get(participant[escyear]['img']['hot']).content)
+
         except FileNotFoundError as ferr:
             print('!!!file not found!!!')
             print(ferr)
