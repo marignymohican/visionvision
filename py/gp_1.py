@@ -131,19 +131,12 @@ for p in eutvparticipants:
                     
                     # overwrite the local one
                     makethumbnail(locImg, hotImg.content)
-                
-                
-                
-                
-                
-                
-                
+
             else:
                 # file doesnt yet exist
                 print('i dont have a photo for ' + participant[escyear]['artist'])
-                
-              
-                
+                makethumbnail(locImg, requests.get(participant[escyear]['img']['hot']).content)
+
         except FileNotFoundError as ferr:
             print('!!!file not found!!!')
             print(ferr)
