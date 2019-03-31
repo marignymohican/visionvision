@@ -152,8 +152,14 @@ for p in eutvparticipants:
         if participant[escyear]['song'] is not None:
             participant[escyear]['song'] = participant[escyear]['song'].find('meta', attrs={'itemprop': 'name'})['content']
 
-
-
+        # <meta itemprop="award" content="place in theFirst Semi-Final of the Eurovision Song Contest in 2019">
+        participant[escyear]['award'] = pPage.find('meta', attrs={'itemprop': 'award'})['content']
+        if 'First Semi-Final' in participant[escyear]['award']:
+            participant[escyear]['award'] = 'first-semi-final'
+        elif 'Second Semi-Final' in participant[escyear]['award']:
+            participant[escyear]['award'] = 'second-semi-final'
+        else:
+            participant[escyear]['award'] = None
 
         # update the json object for the local file
         participants.append(participant)
