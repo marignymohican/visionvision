@@ -1,0 +1,2729 @@
+{
+	"props": {
+		"pageProps": {
+			"serverState": {
+				"apollo": {
+					"data": {
+						"Metadata:1": {
+							"id": "1",
+							"title": "Eurovision Song Contest Tel Aviv 2019",
+							"description": "The official website of the Eurovision Song Contest, with the latest news, photos, videos, info about the participants and its rich history.",
+							"airdate": "Dare to Dream",
+							"airtime": "14, 16 \u0026 18 May 2019",
+							"official_text": "The official website of the Eurovision Song Contest",
+							"og_image": {
+								"type": "id",
+								"generated": false,
+								"id": "Image:107291",
+								"typename": "Image"
+							},
+							"twitter": "@Eurovision",
+							"facebook": "EurovisionSongContest",
+							"instagram": "Eurovision",
+							"snapchat": "EurovisionSong",
+							"youtube": "Eurovision",
+							"__typename": "Metadata"
+						},
+						"Image:107291": {
+							"id": "107291",
+							"path": "https://apex.eurovision.tv/image/f2903d83e84b22a5a8b8c728c1c81d21",
+							"__typename": "Image"
+						},
+						"ROOT_QUERY": {
+							"metadata": {
+								"type": "id",
+								"generated": false,
+								"id": "Metadata:1",
+								"typename": "Metadata"
+							},
+							"sponsors": {
+								"type": "id",
+								"generated": true,
+								"id": "$ROOT_QUERY.sponsors",
+								"typename": "SponsorsCollection"
+							},
+							"currentEvent": {
+								"type": "id",
+								"generated": false,
+								"id": "Event:64",
+								"typename": "Event"
+							}
+						},
+						"Sponsor:6": {
+							"id": "6",
+							"name": "MyHeritage",
+							"designation": "Presenting Partner",
+							"url": "https://myheritage.com",
+							"logo": {
+								"type": "id",
+								"generated": false,
+								"id": "Image:107167",
+								"typename": "Image"
+							},
+							"__typename": "Sponsor"
+						},
+						"Image:107167": {
+							"id": "107167",
+							"path": "https://apex.eurovision.tv/image/50349cbf05261f15183f36b371208e04",
+							"__typename": "Image"
+						},
+						"Sponsor:7": {
+							"id": "7",
+							"name": "Osram",
+							"designation": "Official Lighting Partner",
+							"url": "https://www.osram.com/corporate",
+							"logo": {
+								"type": "id",
+								"generated": false,
+								"id": "Image:107171",
+								"typename": "Image"
+							},
+							"__typename": "Sponsor"
+						},
+						"Image:107171": {
+							"id": "107171",
+							"path": "https://apex.eurovision.tv/image/f1a8522d03bffc4c204fa5370fe112ad",
+							"__typename": "Image"
+						},
+						"Sponsor:8": {
+							"id": "8",
+							"name": "Nexway",
+							"designation": "Official Partner",
+							"url": "https://nexway.com",
+							"logo": {
+								"type": "id",
+								"generated": false,
+								"id": "Image:107991",
+								"typename": "Image"
+							},
+							"__typename": "Sponsor"
+						},
+						"Image:107991": {
+							"id": "107991",
+							"path": "https://apex.eurovision.tv/image/090300579294577725ff3a613ed7fa44",
+							"__typename": "Image"
+						},
+						"$ROOT_QUERY.sponsors": {
+							"items": [{
+								"type": "id",
+								"generated": false,
+								"id": "Sponsor:6",
+								"typename": "Sponsor"
+							}, {
+								"type": "id",
+								"generated": false,
+								"id": "Sponsor:7",
+								"typename": "Sponsor"
+							}, {
+								"type": "id",
+								"generated": false,
+								"id": "Sponsor:8",
+								"typename": "Sponsor"
+							}],
+							"__typename": "SponsorsCollection"
+						},
+						"Event:64": {
+							"id": "64",
+							"slug": "tel-aviv-2019",
+							"name": "Tel Aviv 2019",
+							"host_city": "Tel Aviv",
+							"venue": "Expo Tel Aviv (International Convention Center)",
+							"rounds": [{
+								"type": "id",
+								"generated": false,
+								"id": "EventRound:91",
+								"typename": "EventRound"
+							}, {
+								"type": "id",
+								"generated": false,
+								"id": "EventRound:92",
+								"typename": "EventRound"
+							}, {
+								"type": "id",
+								"generated": false,
+								"id": "EventRound:93",
+								"typename": "EventRound"
+							}],
+							"participants": [{
+								"type": "id",
+								"generated": false,
+								"id": "Participant:1529",
+								"typename": "Participant"
+							}, {
+								"type": "id",
+								"generated": false,
+								"id": "Participant:1530",
+								"typename": "Participant"
+							}, {
+								"type": "id",
+								"generated": false,
+								"id": "Participant:1531",
+								"typename": "Participant"
+							}, {
+								"type": "id",
+								"generated": false,
+								"id": "Participant:1533",
+								"typename": "Participant"
+							}, {
+								"type": "id",
+								"generated": false,
+								"id": "Participant:1534",
+								"typename": "Participant"
+							}, {
+								"type": "id",
+								"generated": false,
+								"id": "Participant:1535",
+								"typename": "Participant"
+							}, {
+								"type": "id",
+								"generated": false,
+								"id": "Participant:1536",
+								"typename": "Participant"
+							}, {
+								"type": "id",
+								"generated": false,
+								"id": "Participant:1537",
+								"typename": "Participant"
+							}, {
+								"type": "id",
+								"generated": false,
+								"id": "Participant:1538",
+								"typename": "Participant"
+							}, {
+								"type": "id",
+								"generated": false,
+								"id": "Participant:1539",
+								"typename": "Participant"
+							}, {
+								"type": "id",
+								"generated": false,
+								"id": "Participant:1540",
+								"typename": "Participant"
+							}, {
+								"type": "id",
+								"generated": false,
+								"id": "Participant:1541",
+								"typename": "Participant"
+							}, {
+								"type": "id",
+								"generated": false,
+								"id": "Participant:1542",
+								"typename": "Participant"
+							}, {
+								"type": "id",
+								"generated": false,
+								"id": "Participant:1543",
+								"typename": "Participant"
+							}, {
+								"type": "id",
+								"generated": false,
+								"id": "Participant:1544",
+								"typename": "Participant"
+							}, {
+								"type": "id",
+								"generated": false,
+								"id": "Participant:1545",
+								"typename": "Participant"
+							}, {
+								"type": "id",
+								"generated": false,
+								"id": "Participant:1546",
+								"typename": "Participant"
+							}, {
+								"type": "id",
+								"generated": false,
+								"id": "Participant:1547",
+								"typename": "Participant"
+							}, {
+								"type": "id",
+								"generated": false,
+								"id": "Participant:1548",
+								"typename": "Participant"
+							}, {
+								"type": "id",
+								"generated": false,
+								"id": "Participant:1549",
+								"typename": "Participant"
+							}, {
+								"type": "id",
+								"generated": false,
+								"id": "Participant:1550",
+								"typename": "Participant"
+							}, {
+								"type": "id",
+								"generated": false,
+								"id": "Participant:1551",
+								"typename": "Participant"
+							}, {
+								"type": "id",
+								"generated": false,
+								"id": "Participant:1552",
+								"typename": "Participant"
+							}, {
+								"type": "id",
+								"generated": false,
+								"id": "Participant:1553",
+								"typename": "Participant"
+							}, {
+								"type": "id",
+								"generated": false,
+								"id": "Participant:1554",
+								"typename": "Participant"
+							}, {
+								"type": "id",
+								"generated": false,
+								"id": "Participant:1555",
+								"typename": "Participant"
+							}, {
+								"type": "id",
+								"generated": false,
+								"id": "Participant:1556",
+								"typename": "Participant"
+							}, {
+								"type": "id",
+								"generated": false,
+								"id": "Participant:1557",
+								"typename": "Participant"
+							}, {
+								"type": "id",
+								"generated": false,
+								"id": "Participant:1558",
+								"typename": "Participant"
+							}, {
+								"type": "id",
+								"generated": false,
+								"id": "Participant:1559",
+								"typename": "Participant"
+							}, {
+								"type": "id",
+								"generated": false,
+								"id": "Participant:1560",
+								"typename": "Participant"
+							}, {
+								"type": "id",
+								"generated": false,
+								"id": "Participant:1561",
+								"typename": "Participant"
+							}, {
+								"type": "id",
+								"generated": false,
+								"id": "Participant:1562",
+								"typename": "Participant"
+							}, {
+								"type": "id",
+								"generated": false,
+								"id": "Participant:1563",
+								"typename": "Participant"
+							}, {
+								"type": "id",
+								"generated": false,
+								"id": "Participant:1564",
+								"typename": "Participant"
+							}, {
+								"type": "id",
+								"generated": false,
+								"id": "Participant:1565",
+								"typename": "Participant"
+							}, {
+								"type": "id",
+								"generated": false,
+								"id": "Participant:1566",
+								"typename": "Participant"
+							}, {
+								"type": "id",
+								"generated": false,
+								"id": "Participant:1567",
+								"typename": "Participant"
+							}, {
+								"type": "id",
+								"generated": false,
+								"id": "Participant:1568",
+								"typename": "Participant"
+							}, {
+								"type": "id",
+								"generated": false,
+								"id": "Participant:1570",
+								"typename": "Participant"
+							}, {
+								"type": "id",
+								"generated": false,
+								"id": "Participant:1571",
+								"typename": "Participant"
+							}],
+							"__typename": "Event"
+						},
+						"EventRound:91": {
+							"id": "91",
+							"name": "First Semi-Final",
+							"slug": "first-semi-final",
+							"date": "2019-05-14T19:00:00+00:00",
+							"__typename": "EventRound"
+						},
+						"EventRound:92": {
+							"id": "92",
+							"name": "Second Semi-Final",
+							"slug": "second-semi-final",
+							"date": "2019-05-16T19:00:00+00:00",
+							"__typename": "EventRound"
+						},
+						"EventRound:93": {
+							"id": "93",
+							"name": "Grand Final",
+							"slug": "grand-final",
+							"date": "2019-05-18T19:00:00+00:00",
+							"__typename": "EventRound"
+						},
+						"Participant:1529": {
+							"id": "1529",
+							"name": "Jonida Maliqi",
+							"status": "published",
+							"slug": "jonida-maliqi",
+							"participations": [{
+								"type": "id",
+								"generated": false,
+								"id": "Participation:1795",
+								"typename": "Participation"
+							}],
+							"photo": {
+								"type": "id",
+								"generated": false,
+								"id": "Image:107964",
+								"typename": "Image"
+							},
+							"broadcaster": {
+								"type": "id",
+								"generated": false,
+								"id": "Broadcaster:39",
+								"typename": "Broadcaster"
+							},
+							"__typename": "Participant"
+						},
+						"Participation:1795": {
+							"id": "1795",
+							"round": {
+								"type": "id",
+								"generated": false,
+								"id": "EventRound:92",
+								"typename": "EventRound"
+							},
+							"__typename": "Participation"
+						},
+						"Image:107964": {
+							"id": "107964",
+							"path": "https://apex.eurovision.tv/image/d1c73ad8c95663e7208cdb45bc3fe8b8",
+							"description": "Jonida Maliqi",
+							"__typename": "Image"
+						},
+						"Broadcaster:39": {
+							"id": "39",
+							"country": {
+								"type": "id",
+								"generated": false,
+								"id": "Country:6",
+								"typename": "Country"
+							},
+							"__typename": "Broadcaster"
+						},
+						"Country:6": {
+							"id": "6",
+							"nickname": "Albania",
+							"alpha_2": "AL",
+							"__typename": "Country"
+						},
+						"Participant:1530": {
+							"id": "1530",
+							"name": "Srbuk",
+							"status": "published",
+							"slug": "srbuk",
+							"participations": [{
+								"type": "id",
+								"generated": false,
+								"id": "Participation:1815",
+								"typename": "Participation"
+							}],
+							"photo": {
+								"type": "id",
+								"generated": false,
+								"id": "Image:107960",
+								"typename": "Image"
+							},
+							"broadcaster": {
+								"type": "id",
+								"generated": false,
+								"id": "Broadcaster:76",
+								"typename": "Broadcaster"
+							},
+							"__typename": "Participant"
+						},
+						"Participation:1815": {
+							"id": "1815",
+							"round": {
+								"type": "id",
+								"generated": false,
+								"id": "EventRound:92",
+								"typename": "EventRound"
+							},
+							"__typename": "Participation"
+						},
+						"Image:107960": {
+							"id": "107960",
+							"path": "https://apex.eurovision.tv/image/42916216afc3d4cbf4f5eb801fad40d4",
+							"description": "Srbuk",
+							"__typename": "Image"
+						},
+						"Broadcaster:76": {
+							"id": "76",
+							"country": {
+								"type": "id",
+								"generated": false,
+								"id": "Country:10",
+								"typename": "Country"
+							},
+							"__typename": "Broadcaster"
+						},
+						"Country:10": {
+							"id": "10",
+							"nickname": "Armenia",
+							"alpha_2": "AM",
+							"__typename": "Country"
+						},
+						"Participant:1531": {
+							"id": "1531",
+							"name": "Kate Miller-Heidke",
+							"status": "published",
+							"slug": "kate-miller-heidke",
+							"participations": [{
+								"type": "id",
+								"generated": false,
+								"id": "Participation:1802",
+								"typename": "Participation"
+							}],
+							"photo": {
+								"type": "id",
+								"generated": false,
+								"id": "Image:107987",
+								"typename": "Image"
+							},
+							"broadcaster": {
+								"type": "id",
+								"generated": false,
+								"id": "Broadcaster:98",
+								"typename": "Broadcaster"
+							},
+							"__typename": "Participant"
+						},
+						"Participation:1802": {
+							"id": "1802",
+							"round": {
+								"type": "id",
+								"generated": false,
+								"id": "EventRound:91",
+								"typename": "EventRound"
+							},
+							"__typename": "Participation"
+						},
+						"Image:107987": {
+							"id": "107987",
+							"path": "https://apex.eurovision.tv/image/9f5c04b0d263d92d9acdff16946f221d",
+							"description": "Kate Miller-Heidke",
+							"__typename": "Image"
+						},
+						"Broadcaster:98": {
+							"id": "98",
+							"country": {
+								"type": "id",
+								"generated": false,
+								"id": "Country:15",
+								"typename": "Country"
+							},
+							"__typename": "Broadcaster"
+						},
+						"Country:15": {
+							"id": "15",
+							"nickname": "Australia",
+							"alpha_2": "AU",
+							"__typename": "Country"
+						},
+						"Participant:1533": {
+							"id": "1533",
+							"name": "PÆNDA",
+							"status": "published",
+							"slug": "paenda",
+							"participations": [{
+								"type": "id",
+								"generated": false,
+								"id": "Participation:1797",
+								"typename": "Participation"
+							}],
+							"photo": {
+								"type": "id",
+								"generated": false,
+								"id": "Image:107988",
+								"typename": "Image"
+							},
+							"broadcaster": {
+								"type": "id",
+								"generated": false,
+								"id": "Broadcaster:10",
+								"typename": "Broadcaster"
+							},
+							"__typename": "Participant"
+						},
+						"Participation:1797": {
+							"id": "1797",
+							"round": {
+								"type": "id",
+								"generated": false,
+								"id": "EventRound:92",
+								"typename": "EventRound"
+							},
+							"__typename": "Participation"
+						},
+						"Image:107988": {
+							"id": "107988",
+							"path": "https://apex.eurovision.tv/image/6c29c92eff1ce5beef60ae8307028ac6",
+							"description": "PÆNDA",
+							"__typename": "Image"
+						},
+						"Broadcaster:10": {
+							"id": "10",
+							"country": {
+								"type": "id",
+								"generated": false,
+								"id": "Country:16",
+								"typename": "Country"
+							},
+							"__typename": "Broadcaster"
+						},
+						"Country:16": {
+							"id": "16",
+							"nickname": "Austria",
+							"alpha_2": "AT",
+							"__typename": "Country"
+						},
+						"Participant:1534": {
+							"id": "1534",
+							"name": "Chingiz",
+							"status": "published",
+							"slug": "chingiz",
+							"participations": [{
+								"type": "id",
+								"generated": false,
+								"id": "Participation:1825",
+								"typename": "Participation"
+							}],
+							"photo": {
+								"type": "id",
+								"generated": false,
+								"id": "Image:107894",
+								"typename": "Image"
+							},
+							"broadcaster": {
+								"type": "id",
+								"generated": false,
+								"id": "Broadcaster:37",
+								"typename": "Broadcaster"
+							},
+							"__typename": "Participant"
+						},
+						"Participation:1825": {
+							"id": "1825",
+							"round": {
+								"type": "id",
+								"generated": false,
+								"id": "EventRound:92",
+								"typename": "EventRound"
+							},
+							"__typename": "Participation"
+						},
+						"Image:107894": {
+							"id": "107894",
+							"path": "https://apex.eurovision.tv/image/8ef51e1edfb2a0d9249357da4997c434",
+							"description": "Chingiz",
+							"__typename": "Image"
+						},
+						"Broadcaster:37": {
+							"id": "37",
+							"country": {
+								"type": "id",
+								"generated": false,
+								"id": "Country:17",
+								"typename": "Country"
+							},
+							"__typename": "Broadcaster"
+						},
+						"Country:17": {
+							"id": "17",
+							"nickname": "Azerbaijan",
+							"alpha_2": "AZ",
+							"__typename": "Country"
+						},
+						"Participant:1535": {
+							"id": "1535",
+							"name": "ZENA",
+							"status": "published",
+							"slug": "zena",
+							"participations": [{
+								"type": "id",
+								"generated": false,
+								"id": "Participation:1793",
+								"typename": "Participation"
+							}],
+							"photo": {
+								"type": "id",
+								"generated": false,
+								"id": "Image:107965",
+								"typename": "Image"
+							},
+							"broadcaster": {
+								"type": "id",
+								"generated": false,
+								"id": "Broadcaster:41",
+								"typename": "Broadcaster"
+							},
+							"__typename": "Participant"
+						},
+						"Participation:1793": {
+							"id": "1793",
+							"round": {
+								"type": "id",
+								"generated": false,
+								"id": "EventRound:91",
+								"typename": "EventRound"
+							},
+							"__typename": "Participation"
+						},
+						"Image:107965": {
+							"id": "107965",
+							"path": "https://apex.eurovision.tv/image/d5069fdc2ad017a40813ffead4a36bc6",
+							"description": "ZENA",
+							"__typename": "Image"
+						},
+						"Broadcaster:41": {
+							"id": "41",
+							"country": {
+								"type": "id",
+								"generated": false,
+								"id": "Country:28",
+								"typename": "Country"
+							},
+							"__typename": "Broadcaster"
+						},
+						"Country:28": {
+							"id": "28",
+							"nickname": "Belarus",
+							"alpha_2": "BY",
+							"__typename": "Country"
+						},
+						"Participant:1536": {
+							"id": "1536",
+							"name": "Eliot",
+							"status": "published",
+							"slug": "eliot",
+							"participations": [{
+								"type": "id",
+								"generated": false,
+								"id": "Participation:1824",
+								"typename": "Participation"
+							}],
+							"photo": {
+								"type": "id",
+								"generated": false,
+								"id": "Image:107995",
+								"typename": "Image"
+							},
+							"broadcaster": {
+								"type": "id",
+								"generated": false,
+								"id": "Broadcaster:52",
+								"typename": "Broadcaster"
+							},
+							"__typename": "Participant"
+						},
+						"Participation:1824": {
+							"id": "1824",
+							"round": {
+								"type": "id",
+								"generated": false,
+								"id": "EventRound:91",
+								"typename": "EventRound"
+							},
+							"__typename": "Participation"
+						},
+						"Image:107995": {
+							"id": "107995",
+							"path": "https://apex.eurovision.tv/image/b7ad51b46528f3f6d14ce23ca3ff92d4",
+							"description": "Eliot",
+							"__typename": "Image"
+						},
+						"Broadcaster:52": {
+							"id": "52",
+							"country": {
+								"type": "id",
+								"generated": false,
+								"id": "Country:19",
+								"typename": "Country"
+							},
+							"__typename": "Broadcaster"
+						},
+						"Country:19": {
+							"id": "19",
+							"nickname": "Belgium",
+							"alpha_2": "BE",
+							"__typename": "Country"
+						},
+						"Participant:1537": {
+							"id": "1537",
+							"name": "Roko",
+							"status": "published",
+							"slug": "roko",
+							"participations": [{
+								"type": "id",
+								"generated": false,
+								"id": "Participation:1813",
+								"typename": "Participation"
+							}],
+							"photo": {
+								"type": "id",
+								"generated": false,
+								"id": "Image:107985",
+								"typename": "Image"
+							},
+							"broadcaster": {
+								"type": "id",
+								"generated": false,
+								"id": "Broadcaster:25",
+								"typename": "Broadcaster"
+							},
+							"__typename": "Participant"
+						},
+						"Participation:1813": {
+							"id": "1813",
+							"round": {
+								"type": "id",
+								"generated": false,
+								"id": "EventRound:92",
+								"typename": "EventRound"
+							},
+							"__typename": "Participation"
+						},
+						"Image:107985": {
+							"id": "107985",
+							"path": "https://apex.eurovision.tv/image/f941b0c474b435ac88d89564a1c2cc03",
+							"description": "Roko",
+							"__typename": "Image"
+						},
+						"Broadcaster:25": {
+							"id": "25",
+							"country": {
+								"type": "id",
+								"generated": false,
+								"id": "Country:99",
+								"typename": "Country"
+							},
+							"__typename": "Broadcaster"
+						},
+						"Country:99": {
+							"id": "99",
+							"nickname": "Croatia",
+							"alpha_2": "HR",
+							"__typename": "Country"
+						},
+						"Participant:1538": {
+							"id": "1538",
+							"name": "Tamta",
+							"status": "published",
+							"slug": "tamta",
+							"participations": [{
+								"type": "id",
+								"generated": false,
+								"id": "Participation:1803",
+								"typename": "Participation"
+							}],
+							"photo": {
+								"type": "id",
+								"generated": false,
+								"id": "Image:107852",
+								"typename": "Image"
+							},
+							"broadcaster": {
+								"type": "id",
+								"generated": false,
+								"id": "Broadcaster:14",
+								"typename": "Broadcaster"
+							},
+							"__typename": "Participant"
+						},
+						"Participation:1803": {
+							"id": "1803",
+							"round": {
+								"type": "id",
+								"generated": false,
+								"id": "EventRound:91",
+								"typename": "EventRound"
+							},
+							"__typename": "Participation"
+						},
+						"Image:107852": {
+							"id": "107852",
+							"path": "https://apex.eurovision.tv/image/21ef57b11ae7f74e9c62fed7a45fcbd1",
+							"description": "Tamta, Cyprus' Eurovision 2019 representative",
+							"__typename": "Image"
+						},
+						"Broadcaster:14": {
+							"id": "14",
+							"country": {
+								"type": "id",
+								"generated": false,
+								"id": "Country:57",
+								"typename": "Country"
+							},
+							"__typename": "Broadcaster"
+						},
+						"Country:57": {
+							"id": "57",
+							"nickname": "Cyprus",
+							"alpha_2": "CY",
+							"__typename": "Country"
+						},
+						"Participant:1539": {
+							"id": "1539",
+							"name": "Leonora",
+							"status": "published",
+							"slug": "leonora",
+							"participations": [{
+								"type": "id",
+								"generated": false,
+								"id": "Participation:1814",
+								"typename": "Participation"
+							}],
+							"photo": {
+								"type": "id",
+								"generated": false,
+								"id": "Image:107996",
+								"typename": "Image"
+							},
+							"broadcaster": {
+								"type": "id",
+								"generated": false,
+								"id": "Broadcaster:8",
+								"typename": "Broadcaster"
+							},
+							"__typename": "Participant"
+						},
+						"Participation:1814": {
+							"id": "1814",
+							"round": {
+								"type": "id",
+								"generated": false,
+								"id": "EventRound:92",
+								"typename": "EventRound"
+							},
+							"__typename": "Participation"
+						},
+						"Image:107996": {
+							"id": "107996",
+							"path": "https://apex.eurovision.tv/image/a59f651448627b3fc07b50c1f57ee904",
+							"description": "Leonora",
+							"__typename": "Image"
+						},
+						"Broadcaster:8": {
+							"id": "8",
+							"country": {
+								"type": "id",
+								"generated": false,
+								"id": "Country:62",
+								"typename": "Country"
+							},
+							"__typename": "Broadcaster"
+						},
+						"Country:62": {
+							"id": "62",
+							"nickname": "Denmark",
+							"alpha_2": "DK",
+							"__typename": "Country"
+						},
+						"Participant:1540": {
+							"id": "1540",
+							"name": "Victor Crone",
+							"status": "published",
+							"slug": "victor-crone",
+							"participations": [{
+								"type": "id",
+								"generated": false,
+								"id": "Participation:1792",
+								"typename": "Participation"
+							}],
+							"photo": {
+								"type": "id",
+								"generated": false,
+								"id": "Image:107910",
+								"typename": "Image"
+							},
+							"broadcaster": {
+								"type": "id",
+								"generated": false,
+								"id": "Broadcaster:26",
+								"typename": "Broadcaster"
+							},
+							"__typename": "Participant"
+						},
+						"Participation:1792": {
+							"id": "1792",
+							"round": {
+								"type": "id",
+								"generated": false,
+								"id": "EventRound:91",
+								"typename": "EventRound"
+							},
+							"__typename": "Participation"
+						},
+						"Image:107910": {
+							"id": "107910",
+							"path": "https://apex.eurovision.tv/image/83332167f3009052e31fadbffbe575e4",
+							"description": "Victor Crone",
+							"__typename": "Image"
+						},
+						"Broadcaster:26": {
+							"id": "26",
+							"country": {
+								"type": "id",
+								"generated": false,
+								"id": "Country:70",
+								"typename": "Country"
+							},
+							"__typename": "Broadcaster"
+						},
+						"Country:70": {
+							"id": "70",
+							"nickname": "Estonia",
+							"alpha_2": "EE",
+							"__typename": "Country"
+						},
+						"Participant:1541": {
+							"id": "1541",
+							"name": "Darude feat. Sebastian Rejman",
+							"status": "published",
+							"slug": "darude",
+							"participations": [{
+								"type": "id",
+								"generated": false,
+								"id": "Participation:1823",
+								"typename": "Participation"
+							}],
+							"photo": {
+								"type": "id",
+								"generated": false,
+								"id": "Image:107950",
+								"typename": "Image"
+							},
+							"broadcaster": {
+								"type": "id",
+								"generated": false,
+								"id": "Broadcaster:22",
+								"typename": "Broadcaster"
+							},
+							"__typename": "Participant"
+						},
+						"Participation:1823": {
+							"id": "1823",
+							"round": {
+								"type": "id",
+								"generated": false,
+								"id": "EventRound:91",
+								"typename": "EventRound"
+							},
+							"__typename": "Participation"
+						},
+						"Image:107950": {
+							"id": "107950",
+							"path": "https://apex.eurovision.tv/image/7d778ff6e52d11d53024d8bf6947a51a",
+							"description": "Darude \u0026 Sebastian Rejman",
+							"__typename": "Image"
+						},
+						"Broadcaster:22": {
+							"id": "22",
+							"country": {
+								"type": "id",
+								"generated": false,
+								"id": "Country:72",
+								"typename": "Country"
+							},
+							"__typename": "Broadcaster"
+						},
+						"Country:72": {
+							"id": "72",
+							"nickname": "Finland",
+							"alpha_2": "FI",
+							"__typename": "Country"
+						},
+						"Participant:1542": {
+							"id": "1542",
+							"name": "Bilal Hassani",
+							"status": "published",
+							"slug": "bilal-hassani",
+							"participations": [{
+								"type": "id",
+								"generated": false,
+								"id": "Participation:1831",
+								"typename": "Participation"
+							}],
+							"photo": {
+								"type": "id",
+								"generated": false,
+								"id": "Image:107397",
+								"typename": "Image"
+							},
+							"broadcaster": {
+								"type": "id",
+								"generated": false,
+								"id": "Broadcaster:2",
+								"typename": "Broadcaster"
+							},
+							"__typename": "Participant"
+						},
+						"Participation:1831": {
+							"id": "1831",
+							"round": {
+								"type": "id",
+								"generated": false,
+								"id": "EventRound:93",
+								"typename": "EventRound"
+							},
+							"__typename": "Participation"
+						},
+						"Image:107397": {
+							"id": "107397",
+							"path": "https://apex.eurovision.tv/image/d6299b5bafce5baa7e589f42eb30c74c",
+							"description": "Bilal Hassani will represent France in Tel Aviv with 'Roi'",
+							"__typename": "Image"
+						},
+						"Broadcaster:2": {
+							"id": "2",
+							"country": {
+								"type": "id",
+								"generated": false,
+								"id": "Country:75",
+								"typename": "Country"
+							},
+							"__typename": "Broadcaster"
+						},
+						"Country:75": {
+							"id": "75",
+							"nickname": "France",
+							"alpha_2": "FR",
+							"__typename": "Country"
+						},
+						"Participant:1543": {
+							"id": "1543",
+							"name": "Tamara Todevska",
+							"status": "published",
+							"slug": "tamara-todevska",
+							"participations": [{
+								"type": "id",
+								"generated": false,
+								"id": "Participation:1804",
+								"typename": "Participation"
+							}],
+							"photo": {
+								"type": "id",
+								"generated": false,
+								"id": "Image:107904",
+								"typename": "Image"
+							},
+							"broadcaster": {
+								"type": "id",
+								"generated": false,
+								"id": "Broadcaster:27",
+								"typename": "Broadcaster"
+							},
+							"__typename": "Participant"
+						},
+						"Participation:1804": {
+							"id": "1804",
+							"round": {
+								"type": "id",
+								"generated": false,
+								"id": "EventRound:92",
+								"typename": "EventRound"
+							},
+							"__typename": "Participation"
+						},
+						"Image:107904": {
+							"id": "107904",
+							"path": "https://apex.eurovision.tv/image/0e530242acd636866baf2e040cbca9e3",
+							"description": "Tamara Todevska",
+							"__typename": "Image"
+						},
+						"Broadcaster:27": {
+							"id": "27",
+							"country": {
+								"type": "id",
+								"generated": false,
+								"id": "Country:145",
+								"typename": "Country"
+							},
+							"__typename": "Broadcaster"
+						},
+						"Country:145": {
+							"id": "145",
+							"nickname": "North Macedonia",
+							"alpha_2": "MK",
+							"__typename": "Country"
+						},
+						"Participant:1544": {
+							"id": "1544",
+							"name": "S!sters",
+							"status": "published",
+							"slug": "s!sters",
+							"participations": [{
+								"type": "id",
+								"generated": false,
+								"id": "Participation:1830",
+								"typename": "Participation"
+							}],
+							"photo": {
+								"type": "id",
+								"generated": false,
+								"id": "Image:108028",
+								"typename": "Image"
+							},
+							"broadcaster": {
+								"type": "id",
+								"generated": false,
+								"id": "Broadcaster:9",
+								"typename": "Broadcaster"
+							},
+							"__typename": "Participant"
+						},
+						"Participation:1830": {
+							"id": "1830",
+							"round": {
+								"type": "id",
+								"generated": false,
+								"id": "EventRound:93",
+								"typename": "EventRound"
+							},
+							"__typename": "Participation"
+						},
+						"Image:108028": {
+							"id": "108028",
+							"path": "https://apex.eurovision.tv/image/9d9f2f1b5299f97e5f35559d74279644",
+							"description": null,
+							"__typename": "Image"
+						},
+						"Broadcaster:9": {
+							"id": "9",
+							"country": {
+								"type": "id",
+								"generated": false,
+								"id": "Country:59",
+								"typename": "Country"
+							},
+							"__typename": "Broadcaster"
+						},
+						"Country:59": {
+							"id": "59",
+							"nickname": "Germany",
+							"alpha_2": "DE",
+							"__typename": "Country"
+						},
+						"Participant:1545": {
+							"id": "1545",
+							"name": "Lake Malawi",
+							"status": "published",
+							"slug": "lake-malawi",
+							"participations": [{
+								"type": "id",
+								"generated": false,
+								"id": "Participation:1822",
+								"typename": "Participation"
+							}],
+							"photo": {
+								"type": "id",
+								"generated": false,
+								"id": "Image:107956",
+								"typename": "Image"
+							},
+							"broadcaster": {
+								"type": "id",
+								"generated": false,
+								"id": "Broadcaster:46",
+								"typename": "Broadcaster"
+							},
+							"__typename": "Participant"
+						},
+						"Participation:1822": {
+							"id": "1822",
+							"round": {
+								"type": "id",
+								"generated": false,
+								"id": "EventRound:91",
+								"typename": "EventRound"
+							},
+							"__typename": "Participation"
+						},
+						"Image:107956": {
+							"id": "107956",
+							"path": "https://apex.eurovision.tv/image/6650dd787612dbe55a3c20e2067e99c8",
+							"description": "Lake Malawi",
+							"__typename": "Image"
+						},
+						"Broadcaster:46": {
+							"id": "46",
+							"country": {
+								"type": "id",
+								"generated": false,
+								"id": "Country:58",
+								"typename": "Country"
+							},
+							"__typename": "Broadcaster"
+						},
+						"Country:58": {
+							"id": "58",
+							"nickname": "Czech Republic",
+							"alpha_2": "CZ",
+							"__typename": "Country"
+						},
+						"Participant:1546": {
+							"id": "1546",
+							"name": "Oto Nemsadze",
+							"status": "published",
+							"slug": "oto-nemsadze",
+							"participations": [{
+								"type": "id",
+								"generated": false,
+								"id": "Participation:1801",
+								"typename": "Participation"
+							}],
+							"photo": {
+								"type": "id",
+								"generated": false,
+								"id": "Image:107902",
+								"typename": "Image"
+							},
+							"broadcaster": {
+								"type": "id",
+								"generated": false,
+								"id": "Broadcaster:49",
+								"typename": "Broadcaster"
+							},
+							"__typename": "Participant"
+						},
+						"Participation:1801": {
+							"id": "1801",
+							"round": {
+								"type": "id",
+								"generated": false,
+								"id": "EventRound:91",
+								"typename": "EventRound"
+							},
+							"__typename": "Participation"
+						},
+						"Image:107902": {
+							"id": "107902",
+							"path": "https://apex.eurovision.tv/image/d25aaee780b24bd074c03ca6814bdf8b",
+							"description": "Oto Nemsadze",
+							"__typename": "Image"
+						},
+						"Broadcaster:49": {
+							"id": "49",
+							"country": {
+								"type": "id",
+								"generated": false,
+								"id": "Country:80",
+								"typename": "Country"
+							},
+							"__typename": "Broadcaster"
+						},
+						"Country:80": {
+							"id": "80",
+							"nickname": "Georgia",
+							"alpha_2": "GE",
+							"__typename": "Country"
+						},
+						"Participant:1547": {
+							"id": "1547",
+							"name": "Katerine Duska",
+							"status": "published",
+							"slug": "katerine-duska",
+							"participations": [{
+								"type": "id",
+								"generated": false,
+								"id": "Participation:1821",
+								"typename": "Participation"
+							}],
+							"photo": {
+								"type": "id",
+								"generated": false,
+								"id": "Image:107850",
+								"typename": "Image"
+							},
+							"broadcaster": {
+								"type": "id",
+								"generated": false,
+								"id": "Broadcaster:19",
+								"typename": "Broadcaster"
+							},
+							"__typename": "Participant"
+						},
+						"Participation:1821": {
+							"id": "1821",
+							"round": {
+								"type": "id",
+								"generated": false,
+								"id": "EventRound:91",
+								"typename": "EventRound"
+							},
+							"__typename": "Participation"
+						},
+						"Image:107850": {
+							"id": "107850",
+							"path": "https://apex.eurovision.tv/image/ec1830f475b3d065f83dbef7e543d9d5",
+							"description": "Banner Katerine Duska ",
+							"__typename": "Image"
+						},
+						"Broadcaster:19": {
+							"id": "19",
+							"country": {
+								"type": "id",
+								"generated": false,
+								"id": "Country:89",
+								"typename": "Country"
+							},
+							"__typename": "Broadcaster"
+						},
+						"Country:89": {
+							"id": "89",
+							"nickname": "Greece",
+							"alpha_2": "GR",
+							"__typename": "Country"
+						},
+						"Participant:1548": {
+							"id": "1548",
+							"name": "Joci Pápai",
+							"status": "published",
+							"slug": "joci-papai-2019",
+							"participations": [{
+								"type": "id",
+								"generated": false,
+								"id": "Participation:1812",
+								"typename": "Participation"
+							}],
+							"photo": {
+								"type": "id",
+								"generated": false,
+								"id": "Image:107731",
+								"typename": "Image"
+							},
+							"broadcaster": {
+								"type": "id",
+								"generated": false,
+								"id": "Broadcaster:28",
+								"typename": "Broadcaster"
+							},
+							"__typename": "Participant"
+						},
+						"Participation:1812": {
+							"id": "1812",
+							"round": {
+								"type": "id",
+								"generated": false,
+								"id": "EventRound:91",
+								"typename": "EventRound"
+							},
+							"__typename": "Participation"
+						},
+						"Image:107731": {
+							"id": "107731",
+							"path": "https://apex.eurovision.tv/image/24eaf7cbc0d20860d88ee1789192a394",
+							"description": "Joci Pápai, winner of 'A Dal 2019'",
+							"__typename": "Image"
+						},
+						"Broadcaster:28": {
+							"id": "28",
+							"country": {
+								"type": "id",
+								"generated": false,
+								"id": "Country:101",
+								"typename": "Country"
+							},
+							"__typename": "Broadcaster"
+						},
+						"Country:101": {
+							"id": "101",
+							"nickname": "Hungary",
+							"alpha_2": "HU",
+							"__typename": "Country"
+						},
+						"Participant:1549": {
+							"id": "1549",
+							"name": "Hatari",
+							"status": "published",
+							"slug": "hatari",
+							"participations": [{
+								"type": "id",
+								"generated": false,
+								"id": "Participation:1800",
+								"typename": "Participation"
+							}],
+							"photo": {
+								"type": "id",
+								"generated": false,
+								"id": "Image:107792",
+								"typename": "Image"
+							},
+							"broadcaster": {
+								"type": "id",
+								"generated": false,
+								"id": "Broadcaster:4",
+								"typename": "Broadcaster"
+							},
+							"__typename": "Participant"
+						},
+						"Participation:1800": {
+							"id": "1800",
+							"round": {
+								"type": "id",
+								"generated": false,
+								"id": "EventRound:91",
+								"typename": "EventRound"
+							},
+							"__typename": "Participation"
+						},
+						"Image:107792": {
+							"id": "107792",
+							"path": "https://apex.eurovision.tv/image/b16f068f15aac25080e73f84481d75ab",
+							"description": "Hatari, winner 'Söngvakeppnin 2019'",
+							"__typename": "Image"
+						},
+						"Broadcaster:4": {
+							"id": "4",
+							"country": {
+								"type": "id",
+								"generated": false,
+								"id": "Country:109",
+								"typename": "Country"
+							},
+							"__typename": "Broadcaster"
+						},
+						"Country:109": {
+							"id": "109",
+							"nickname": "Iceland",
+							"alpha_2": "IS",
+							"__typename": "Country"
+						},
+						"Participant:1550": {
+							"id": "1550",
+							"name": "Sarah McTernan",
+							"status": "published",
+							"slug": "sarah-mcternan",
+							"participations": [{
+								"type": "id",
+								"generated": false,
+								"id": "Participation:1820",
+								"typename": "Participation"
+							}],
+							"photo": {
+								"type": "id",
+								"generated": false,
+								"id": "Image:107879",
+								"typename": "Image"
+							},
+							"broadcaster": {
+								"type": "id",
+								"generated": false,
+								"id": "Broadcaster:3",
+								"typename": "Broadcaster"
+							},
+							"__typename": "Participant"
+						},
+						"Participation:1820": {
+							"id": "1820",
+							"round": {
+								"type": "id",
+								"generated": false,
+								"id": "EventRound:92",
+								"typename": "EventRound"
+							},
+							"__typename": "Participation"
+						},
+						"Image:107879": {
+							"id": "107879",
+							"path": "https://apex.eurovision.tv/image/c905074d36b19dda9f47d45e75b0be78",
+							"description": "Sarah McTernan",
+							"__typename": "Image"
+						},
+						"Broadcaster:3": {
+							"id": "3",
+							"country": {
+								"type": "id",
+								"generated": false,
+								"id": "Country:106",
+								"typename": "Country"
+							},
+							"__typename": "Broadcaster"
+						},
+						"Country:106": {
+							"id": "106",
+							"nickname": "Ireland",
+							"alpha_2": "IE",
+							"__typename": "Country"
+						},
+						"Participant:1551": {
+							"id": "1551",
+							"name": "Kobi Marimi",
+							"status": "published",
+							"slug": "kobi-marimi",
+							"participations": [{
+								"type": "id",
+								"generated": false,
+								"id": "Participation:1829",
+								"typename": "Participation"
+							}],
+							"photo": {
+								"type": "id",
+								"generated": false,
+								"id": "Image:107903",
+								"typename": "Image"
+							},
+							"broadcaster": {
+								"type": "id",
+								"generated": false,
+								"id": "Broadcaster:103",
+								"typename": "Broadcaster"
+							},
+							"__typename": "Participant"
+						},
+						"Participation:1829": {
+							"id": "1829",
+							"round": {
+								"type": "id",
+								"generated": false,
+								"id": "EventRound:93",
+								"typename": "EventRound"
+							},
+							"__typename": "Participation"
+						},
+						"Image:107903": {
+							"id": "107903",
+							"path": "https://apex.eurovision.tv/image/d9d6fa9c5b46b56ac16a21e1bbea9452",
+							"description": "Kobi Marimi",
+							"__typename": "Image"
+						},
+						"Broadcaster:103": {
+							"id": "103",
+							"country": {
+								"type": "id",
+								"generated": false,
+								"id": "Country:110",
+								"typename": "Country"
+							},
+							"__typename": "Broadcaster"
+						},
+						"Country:110": {
+							"id": "110",
+							"nickname": "Israel",
+							"alpha_2": "IL",
+							"__typename": "Country"
+						},
+						"Participant:1552": {
+							"id": "1552",
+							"name": "Mahmood",
+							"status": "published",
+							"slug": "mahmood",
+							"participations": [{
+								"type": "id",
+								"generated": false,
+								"id": "Participation:1828",
+								"typename": "Participation"
+							}],
+							"photo": {
+								"type": "id",
+								"generated": false,
+								"id": "Image:107800",
+								"typename": "Image"
+							},
+							"broadcaster": {
+								"type": "id",
+								"generated": false,
+								"id": "Broadcaster:1",
+								"typename": "Broadcaster"
+							},
+							"__typename": "Participant"
+						},
+						"Participation:1828": {
+							"id": "1828",
+							"round": {
+								"type": "id",
+								"generated": false,
+								"id": "EventRound:93",
+								"typename": "EventRound"
+							},
+							"__typename": "Participation"
+						},
+						"Image:107800": {
+							"id": "107800",
+							"path": "https://apex.eurovision.tv/image/1801b8c8dfeff4b5a9d26ded0657c8d7",
+							"description": "Sanremo 2019 winner Mahmood",
+							"__typename": "Image"
+						},
+						"Broadcaster:1": {
+							"id": "1",
+							"country": {
+								"type": "id",
+								"generated": false,
+								"id": "Country:111",
+								"typename": "Country"
+							},
+							"__typename": "Broadcaster"
+						},
+						"Country:111": {
+							"id": "111",
+							"nickname": "Italy",
+							"alpha_2": "IT",
+							"__typename": "Country"
+						},
+						"Participant:1553": {
+							"id": "1553",
+							"name": "Carousel",
+							"status": "published",
+							"slug": "carousel",
+							"participations": [{
+								"type": "id",
+								"generated": false,
+								"id": "Participation:1808",
+								"typename": "Participation"
+							}],
+							"photo": {
+								"type": "id",
+								"generated": false,
+								"id": "Image:107990",
+								"typename": "Image"
+							},
+							"broadcaster": {
+								"type": "id",
+								"generated": false,
+								"id": "Broadcaster:29",
+								"typename": "Broadcaster"
+							},
+							"__typename": "Participant"
+						},
+						"Participation:1808": {
+							"id": "1808",
+							"round": {
+								"type": "id",
+								"generated": false,
+								"id": "EventRound:92",
+								"typename": "EventRound"
+							},
+							"__typename": "Participation"
+						},
+						"Image:107990": {
+							"id": "107990",
+							"path": "https://apex.eurovision.tv/image/9119248616ab8c504eb74e1ab0a65086",
+							"description": "Carousel ",
+							"__typename": "Image"
+						},
+						"Broadcaster:29": {
+							"id": "29",
+							"country": {
+								"type": "id",
+								"generated": false,
+								"id": "Country:135",
+								"typename": "Country"
+							},
+							"__typename": "Broadcaster"
+						},
+						"Country:135": {
+							"id": "135",
+							"nickname": "Latvia",
+							"alpha_2": "LV",
+							"__typename": "Country"
+						},
+						"Participant:1554": {
+							"id": "1554",
+							"name": "Jurij Veklenko",
+							"status": "published",
+							"slug": "jurijus",
+							"participations": [{
+								"type": "id",
+								"generated": false,
+								"id": "Participation:1816",
+								"typename": "Participation"
+							}],
+							"photo": {
+								"type": "id",
+								"generated": false,
+								"id": "Image:107952",
+								"typename": "Image"
+							},
+							"broadcaster": {
+								"type": "id",
+								"generated": false,
+								"id": "Broadcaster:30",
+								"typename": "Broadcaster"
+							},
+							"__typename": "Participant"
+						},
+						"Participation:1816": {
+							"id": "1816",
+							"round": {
+								"type": "id",
+								"generated": false,
+								"id": "EventRound:92",
+								"typename": "EventRound"
+							},
+							"__typename": "Participation"
+						},
+						"Image:107952": {
+							"id": "107952",
+							"path": "https://apex.eurovision.tv/image/627e38061046c0c5aebf2e0704c9e434",
+							"description": "Jurijus",
+							"__typename": "Image"
+						},
+						"Broadcaster:30": {
+							"id": "30",
+							"country": {
+								"type": "id",
+								"generated": false,
+								"id": "Country:133",
+								"typename": "Country"
+							},
+							"__typename": "Broadcaster"
+						},
+						"Country:133": {
+							"id": "133",
+							"nickname": "Lithuania",
+							"alpha_2": "LT",
+							"__typename": "Country"
+						},
+						"Participant:1555": {
+							"id": "1555",
+							"name": "Michela",
+							"status": "published",
+							"slug": "michela-pace",
+							"participations": [{
+								"type": "id",
+								"generated": false,
+								"id": "Participation:1817",
+								"typename": "Participation"
+							}],
+							"photo": {
+								"type": "id",
+								"generated": false,
+								"id": "Image:107954",
+								"typename": "Image"
+							},
+							"broadcaster": {
+								"type": "id",
+								"generated": false,
+								"id": "Broadcaster:75",
+								"typename": "Broadcaster"
+							},
+							"__typename": "Participant"
+						},
+						"Participation:1817": {
+							"id": "1817",
+							"round": {
+								"type": "id",
+								"generated": false,
+								"id": "EventRound:92",
+								"typename": "EventRound"
+							},
+							"__typename": "Participation"
+						},
+						"Image:107954": {
+							"id": "107954",
+							"path": "https://apex.eurovision.tv/image/07fa3a62ddb564483fde55946a1aa5ab",
+							"description": "Michela",
+							"__typename": "Image"
+						},
+						"Broadcaster:75": {
+							"id": "75",
+							"country": {
+								"type": "id",
+								"generated": false,
+								"id": "Country:147",
+								"typename": "Country"
+							},
+							"__typename": "Broadcaster"
+						},
+						"Country:147": {
+							"id": "147",
+							"nickname": "Malta",
+							"alpha_2": "MT",
+							"__typename": "Country"
+						},
+						"Participant:1556": {
+							"id": "1556",
+							"name": "Anna Odobescu",
+							"status": "published",
+							"slug": "anna-odobescu",
+							"participations": [{
+								"type": "id",
+								"generated": false,
+								"id": "Participation:1798",
+								"typename": "Participation"
+							}],
+							"photo": {
+								"type": "id",
+								"generated": false,
+								"id": "Image:107787",
+								"typename": "Image"
+							},
+							"broadcaster": {
+								"type": "id",
+								"generated": false,
+								"id": "Broadcaster:45",
+								"typename": "Broadcaster"
+							},
+							"__typename": "Participant"
+						},
+						"Participation:1798": {
+							"id": "1798",
+							"round": {
+								"type": "id",
+								"generated": false,
+								"id": "EventRound:92",
+								"typename": "EventRound"
+							},
+							"__typename": "Participation"
+						},
+						"Image:107787": {
+							"id": "107787",
+							"path": "https://apex.eurovision.tv/image/e77745f5617efde5eb6e879f2f9062d1",
+							"description": "Anna Odobescu, winner of Moldova's national selection 'O Melodie Pentru Europa 2019'",
+							"__typename": "Image"
+						},
+						"Broadcaster:45": {
+							"id": "45",
+							"country": {
+								"type": "id",
+								"generated": false,
+								"id": "Country:140",
+								"typename": "Country"
+							},
+							"__typename": "Broadcaster"
+						},
+						"Country:140": {
+							"id": "140",
+							"nickname": "Moldova",
+							"alpha_2": "MD",
+							"__typename": "Country"
+						},
+						"Participant:1557": {
+							"id": "1557",
+							"name": "D mol",
+							"status": "published",
+							"slug": "d-moll",
+							"participations": [{
+								"type": "id",
+								"generated": false,
+								"id": "Participation:1799",
+								"typename": "Participation"
+							}],
+							"photo": {
+								"type": "id",
+								"generated": false,
+								"id": "Image:107957",
+								"typename": "Image"
+							},
+							"broadcaster": {
+								"type": "id",
+								"generated": false,
+								"id": "Broadcaster:51",
+								"typename": "Broadcaster"
+							},
+							"__typename": "Participant"
+						},
+						"Participation:1799": {
+							"id": "1799",
+							"round": {
+								"type": "id",
+								"generated": false,
+								"id": "EventRound:91",
+								"typename": "EventRound"
+							},
+							"__typename": "Participation"
+						},
+						"Image:107957": {
+							"id": "107957",
+							"path": "https://apex.eurovision.tv/image/c625fdbb8ddb21fefb74f1d41985789c",
+							"description": "D mol",
+							"__typename": "Image"
+						},
+						"Broadcaster:51": {
+							"id": "51",
+							"country": {
+								"type": "id",
+								"generated": false,
+								"id": "Country:149",
+								"typename": "Country"
+							},
+							"__typename": "Broadcaster"
+						},
+						"Country:149": {
+							"id": "149",
+							"nickname": "Montenegro",
+							"alpha_2": "ME",
+							"__typename": "Country"
+						},
+						"Participant:1558": {
+							"id": "1558",
+							"name": "Duncan Laurence",
+							"status": "published",
+							"slug": "duncan-laurence",
+							"participations": [{
+								"type": "id",
+								"generated": false,
+								"id": "Participation:1807",
+								"typename": "Participation"
+							}],
+							"photo": {
+								"type": "id",
+								"generated": false,
+								"id": "Image:107869",
+								"typename": "Image"
+							},
+							"broadcaster": {
+								"type": "id",
+								"generated": false,
+								"id": "Broadcaster:96",
+								"typename": "Broadcaster"
+							},
+							"__typename": "Participant"
+						},
+						"Participation:1807": {
+							"id": "1807",
+							"round": {
+								"type": "id",
+								"generated": false,
+								"id": "EventRound:92",
+								"typename": "EventRound"
+							},
+							"__typename": "Participation"
+						},
+						"Image:107869": {
+							"id": "107869",
+							"path": "https://apex.eurovision.tv/image/0ddf79caebc3c8042cd636ac0fe61b7d",
+							"description": "Duncan Laurence",
+							"__typename": "Image"
+						},
+						"Broadcaster:96": {
+							"id": "96",
+							"country": {
+								"type": "id",
+								"generated": false,
+								"id": "Country:167",
+								"typename": "Country"
+							},
+							"__typename": "Broadcaster"
+						},
+						"Country:167": {
+							"id": "167",
+							"nickname": "The Netherlands",
+							"alpha_2": "NL",
+							"__typename": "Country"
+						},
+						"Participant:1559": {
+							"id": "1559",
+							"name": "KEiiNO",
+							"status": "published",
+							"slug": "keiino",
+							"participations": [{
+								"type": "id",
+								"generated": false,
+								"id": "Participation:1805",
+								"typename": "Participation"
+							}],
+							"photo": {
+								"type": "id",
+								"generated": false,
+								"id": "Image:107373",
+								"typename": "Image"
+							},
+							"broadcaster": {
+								"type": "id",
+								"generated": false,
+								"id": "Broadcaster:21",
+								"typename": "Broadcaster"
+							},
+							"__typename": "Participant"
+						},
+						"Participation:1805": {
+							"id": "1805",
+							"round": {
+								"type": "id",
+								"generated": false,
+								"id": "EventRound:92",
+								"typename": "EventRound"
+							},
+							"__typename": "Participation"
+						},
+						"Image:107373": {
+							"id": "107373",
+							"path": "https://apex.eurovision.tv/image/c0dac316f50880034309f7f7edb620f0",
+							"description": null,
+							"__typename": "Image"
+						},
+						"Broadcaster:21": {
+							"id": "21",
+							"country": {
+								"type": "id",
+								"generated": false,
+								"id": "Country:168",
+								"typename": "Country"
+							},
+							"__typename": "Broadcaster"
+						},
+						"Country:168": {
+							"id": "168",
+							"nickname": "Norway",
+							"alpha_2": "NO",
+							"__typename": "Country"
+						},
+						"Participant:1560": {
+							"id": "1560",
+							"name": "Tulia",
+							"status": "published",
+							"slug": "tulia",
+							"participations": [{
+								"type": "id",
+								"generated": false,
+								"id": "Participation:1811",
+								"typename": "Participation"
+							}],
+							"photo": {
+								"type": "id",
+								"generated": false,
+								"id": "Image:107598",
+								"typename": "Image"
+							},
+							"broadcaster": {
+								"type": "id",
+								"generated": false,
+								"id": "Broadcaster:32",
+								"typename": "Broadcaster"
+							},
+							"__typename": "Participant"
+						},
+						"Participation:1811": {
+							"id": "1811",
+							"round": {
+								"type": "id",
+								"generated": false,
+								"id": "EventRound:91",
+								"typename": "EventRound"
+							},
+							"__typename": "Participation"
+						},
+						"Image:107598": {
+							"id": "107598",
+							"path": "https://apex.eurovision.tv/image/d045d44f4ed9b7074dea5bea3fc8049c",
+							"description": null,
+							"__typename": "Image"
+						},
+						"Broadcaster:32": {
+							"id": "32",
+							"country": {
+								"type": "id",
+								"generated": false,
+								"id": "Country:180",
+								"typename": "Country"
+							},
+							"__typename": "Broadcaster"
+						},
+						"Country:180": {
+							"id": "180",
+							"nickname": "Poland",
+							"alpha_2": "PL",
+							"__typename": "Country"
+						},
+						"Participant:1561": {
+							"id": "1561",
+							"name": "Conan Osiris",
+							"status": "published",
+							"slug": "conan-osiris",
+							"participations": [{
+								"type": "id",
+								"generated": false,
+								"id": "Participation:1794",
+								"typename": "Participation"
+							}],
+							"photo": {
+								"type": "id",
+								"generated": false,
+								"id": "Image:107907",
+								"typename": "Image"
+							},
+							"broadcaster": {
+								"type": "id",
+								"generated": false,
+								"id": "Broadcaster:20",
+								"typename": "Broadcaster"
+							},
+							"__typename": "Participant"
+						},
+						"Participation:1794": {
+							"id": "1794",
+							"round": {
+								"type": "id",
+								"generated": false,
+								"id": "EventRound:91",
+								"typename": "EventRound"
+							},
+							"__typename": "Participation"
+						},
+						"Image:107907": {
+							"id": "107907",
+							"path": "https://apex.eurovision.tv/image/1d8831cdf7676672a2e2732730f864a3",
+							"description": null,
+							"__typename": "Image"
+						},
+						"Broadcaster:20": {
+							"id": "20",
+							"country": {
+								"type": "id",
+								"generated": false,
+								"id": "Country:183",
+								"typename": "Country"
+							},
+							"__typename": "Broadcaster"
+						},
+						"Country:183": {
+							"id": "183",
+							"nickname": "Portugal",
+							"alpha_2": "PT",
+							"__typename": "Country"
+						},
+						"Participant:1562": {
+							"id": "1562",
+							"name": "Ester Peony",
+							"status": "published",
+							"slug": "ester-peony",
+							"participations": [{
+								"type": "id",
+								"generated": false,
+								"id": "Participation:1819",
+								"typename": "Participation"
+							}],
+							"photo": {
+								"type": "id",
+								"generated": false,
+								"id": "Image:107951",
+								"typename": "Image"
+							},
+							"broadcaster": {
+								"type": "id",
+								"generated": false,
+								"id": "Broadcaster:33",
+								"typename": "Broadcaster"
+							},
+							"__typename": "Participant"
+						},
+						"Participation:1819": {
+							"id": "1819",
+							"round": {
+								"type": "id",
+								"generated": false,
+								"id": "EventRound:92",
+								"typename": "EventRound"
+							},
+							"__typename": "Participation"
+						},
+						"Image:107951": {
+							"id": "107951",
+							"path": "https://apex.eurovision.tv/image/7de853d9d3df6c41d5dcc12e23a9c1da",
+							"description": "Ester Peony",
+							"__typename": "Image"
+						},
+						"Broadcaster:33": {
+							"id": "33",
+							"country": {
+								"type": "id",
+								"generated": false,
+								"id": "Country:189",
+								"typename": "Country"
+							},
+							"__typename": "Broadcaster"
+						},
+						"Country:189": {
+							"id": "189",
+							"nickname": "Romania",
+							"alpha_2": "RO",
+							"__typename": "Country"
+						},
+						"Participant:1563": {
+							"id": "1563",
+							"name": "Sergey Lazarev",
+							"status": "published",
+							"slug": "sergey-lazarev-2019",
+							"participations": [{
+								"type": "id",
+								"generated": false,
+								"id": "Participation:1806",
+								"typename": "Participation"
+							}],
+							"photo": {
+								"type": "id",
+								"generated": false,
+								"id": "Image:107457",
+								"typename": "Image"
+							},
+							"broadcaster": {
+								"type": "id",
+								"generated": false,
+								"id": "Broadcaster:63",
+								"typename": "Broadcaster"
+							},
+							"__typename": "Participant"
+						},
+						"Participation:1806": {
+							"id": "1806",
+							"round": {
+								"type": "id",
+								"generated": false,
+								"id": "EventRound:92",
+								"typename": "EventRound"
+							},
+							"__typename": "Participation"
+						},
+						"Image:107457": {
+							"id": "107457",
+							"path": "https://apex.eurovision.tv/image/2471dfa4a83f010e4ec2f1308e3f9dfb",
+							"description": "Sergey Lazarev",
+							"__typename": "Image"
+						},
+						"Broadcaster:63": {
+							"id": "63",
+							"country": {
+								"type": "id",
+								"generated": false,
+								"id": "Country:190",
+								"typename": "Country"
+							},
+							"__typename": "Broadcaster"
+						},
+						"Country:190": {
+							"id": "190",
+							"nickname": "Russia",
+							"alpha_2": "RU",
+							"__typename": "Country"
+						},
+						"Participant:1564": {
+							"id": "1564",
+							"name": "Serhat",
+							"status": "published",
+							"slug": "serhat-2019",
+							"participations": [{
+								"type": "id",
+								"generated": false,
+								"id": "Participation:1818",
+								"typename": "Participation"
+							}],
+							"photo": {
+								"type": "id",
+								"generated": false,
+								"id": "Image:107338",
+								"typename": "Image"
+							},
+							"broadcaster": {
+								"type": "id",
+								"generated": false,
+								"id": "Broadcaster:54",
+								"typename": "Broadcaster"
+							},
+							"__typename": "Participant"
+						},
+						"Participation:1818": {
+							"id": "1818",
+							"round": {
+								"type": "id",
+								"generated": false,
+								"id": "EventRound:91",
+								"typename": "EventRound"
+							},
+							"__typename": "Participation"
+						},
+						"Image:107338": {
+							"id": "107338",
+							"path": "https://apex.eurovision.tv/image/64182b1f367b60f5172ea5a62d564613",
+							"description": "Serhat",
+							"__typename": "Image"
+						},
+						"Broadcaster:54": {
+							"id": "54",
+							"country": {
+								"type": "id",
+								"generated": false,
+								"id": "Country:201",
+								"typename": "Country"
+							},
+							"__typename": "Broadcaster"
+						},
+						"Country:201": {
+							"id": "201",
+							"nickname": "San Marino",
+							"alpha_2": "SM",
+							"__typename": "Country"
+						},
+						"Participant:1565": {
+							"id": "1565",
+							"name": "Nevena Božović",
+							"status": "published",
+							"slug": "nevena-bozovic",
+							"participations": [{
+								"type": "id",
+								"generated": false,
+								"id": "Participation:1809",
+								"typename": "Participation"
+							}],
+							"photo": {
+								"type": "id",
+								"generated": false,
+								"id": "Image:107969",
+								"typename": "Image"
+							},
+							"broadcaster": {
+								"type": "id",
+								"generated": false,
+								"id": "Broadcaster:50",
+								"typename": "Broadcaster"
+							},
+							"__typename": "Participant"
+						},
+						"Participation:1809": {
+							"id": "1809",
+							"round": {
+								"type": "id",
+								"generated": false,
+								"id": "EventRound:91",
+								"typename": "EventRound"
+							},
+							"__typename": "Participation"
+						},
+						"Image:107969": {
+							"id": "107969",
+							"path": "https://apex.eurovision.tv/image/6ff45260c8450539a6f3e552aab4792d",
+							"description": null,
+							"__typename": "Image"
+						},
+						"Broadcaster:50": {
+							"id": "50",
+							"country": {
+								"type": "id",
+								"generated": false,
+								"id": "Country:204",
+								"typename": "Country"
+							},
+							"__typename": "Broadcaster"
+						},
+						"Country:204": {
+							"id": "204",
+							"nickname": "Serbia",
+							"alpha_2": "RS",
+							"__typename": "Country"
+						},
+						"Participant:1566": {
+							"id": "1566",
+							"name": "Zala Kralj \u0026 Gašper Šantl",
+							"status": "published",
+							"slug": "zala-kralj-gasper-santl",
+							"participations": [{
+								"type": "id",
+								"generated": false,
+								"id": "Participation:1791",
+								"typename": "Participation"
+							}],
+							"photo": {
+								"type": "id",
+								"generated": false,
+								"id": "Image:107972",
+								"typename": "Image"
+							},
+							"broadcaster": {
+								"type": "id",
+								"generated": false,
+								"id": "Broadcaster:23",
+								"typename": "Broadcaster"
+							},
+							"__typename": "Participant"
+						},
+						"Participation:1791": {
+							"id": "1791",
+							"round": {
+								"type": "id",
+								"generated": false,
+								"id": "EventRound:91",
+								"typename": "EventRound"
+							},
+							"__typename": "Participation"
+						},
+						"Image:107972": {
+							"id": "107972",
+							"path": "https://apex.eurovision.tv/image/94544e03a123069b93865664a256c6ba",
+							"description": "Zala Kralj \u0026 Gašper Šantl",
+							"__typename": "Image"
+						},
+						"Broadcaster:23": {
+							"id": "23",
+							"country": {
+								"type": "id",
+								"generated": false,
+								"id": "Country:209",
+								"typename": "Country"
+							},
+							"__typename": "Broadcaster"
+						},
+						"Country:209": {
+							"id": "209",
+							"nickname": "Slovenia",
+							"alpha_2": "SI",
+							"__typename": "Country"
+						},
+						"Participant:1567": {
+							"id": "1567",
+							"name": "Miki",
+							"status": "published",
+							"slug": "miki",
+							"participations": [{
+								"type": "id",
+								"generated": false,
+								"id": "Participation:1827",
+								"typename": "Participation"
+							}],
+							"photo": {
+								"type": "id",
+								"generated": false,
+								"id": "Image:107953",
+								"typename": "Image"
+							},
+							"broadcaster": {
+								"type": "id",
+								"generated": false,
+								"id": "Broadcaster:5",
+								"typename": "Broadcaster"
+							},
+							"__typename": "Participant"
+						},
+						"Participation:1827": {
+							"id": "1827",
+							"round": {
+								"type": "id",
+								"generated": false,
+								"id": "EventRound:93",
+								"typename": "EventRound"
+							},
+							"__typename": "Participation"
+						},
+						"Image:107953": {
+							"id": "107953",
+							"path": "https://apex.eurovision.tv/image/22efd604a601db54b2807be2779cfe42",
+							"description": "Miki",
+							"__typename": "Image"
+						},
+						"Broadcaster:5": {
+							"id": "5",
+							"country": {
+								"type": "id",
+								"generated": false,
+								"id": "Country:69",
+								"typename": "Country"
+							},
+							"__typename": "Broadcaster"
+						},
+						"Country:69": {
+							"id": "69",
+							"nickname": "Spain",
+							"alpha_2": "ES",
+							"__typename": "Country"
+						},
+						"Participant:1568": {
+							"id": "1568",
+							"name": "Michael Rice",
+							"status": "published",
+							"slug": "michael-rice",
+							"participations": [{
+								"type": "id",
+								"generated": false,
+								"id": "Participation:1826",
+								"typename": "Participation"
+							}],
+							"photo": {
+								"type": "id",
+								"generated": false,
+								"id": "Image:107982",
+								"typename": "Image"
+							},
+							"broadcaster": {
+								"type": "id",
+								"generated": false,
+								"id": "Broadcaster:6",
+								"typename": "Broadcaster"
+							},
+							"__typename": "Participant"
+						},
+						"Participation:1826": {
+							"id": "1826",
+							"round": {
+								"type": "id",
+								"generated": false,
+								"id": "EventRound:93",
+								"typename": "EventRound"
+							},
+							"__typename": "Participation"
+						},
+						"Image:107982": {
+							"id": "107982",
+							"path": "https://apex.eurovision.tv/image/ba64dab83dfe88871d03e3a6402e0c01",
+							"description": "Michael Rice",
+							"__typename": "Image"
+						},
+						"Broadcaster:6": {
+							"id": "6",
+							"country": {
+								"type": "id",
+								"generated": false,
+								"id": "Country:79",
+								"typename": "Country"
+							},
+							"__typename": "Broadcaster"
+						},
+						"Country:79": {
+							"id": "79",
+							"nickname": "United Kingdom",
+							"alpha_2": "GB",
+							"__typename": "Country"
+						},
+						"Participant:1570": {
+							"id": "1570",
+							"name": "Luca Hänni",
+							"status": "published",
+							"slug": "luca-haenni",
+							"participations": [{
+								"type": "id",
+								"generated": false,
+								"id": "Participation:1790",
+								"typename": "Participation"
+							}],
+							"photo": {
+								"type": "id",
+								"generated": false,
+								"id": "Image:107857",
+								"typename": "Image"
+							},
+							"broadcaster": {
+								"type": "id",
+								"generated": false,
+								"id": "Broadcaster:66",
+								"typename": "Broadcaster"
+							},
+							"__typename": "Participant"
+						},
+						"Participation:1790": {
+							"id": "1790",
+							"round": {
+								"type": "id",
+								"generated": false,
+								"id": "EventRound:92",
+								"typename": "EventRound"
+							},
+							"__typename": "Participation"
+						},
+						"Image:107857": {
+							"id": "107857",
+							"path": "https://apex.eurovision.tv/image/15fea64b3d8c03febd1f31e9e9f94e4f",
+							"description": "Luca Hänni",
+							"__typename": "Image"
+						},
+						"Broadcaster:66": {
+							"id": "66",
+							"country": {
+								"type": "id",
+								"generated": false,
+								"id": "Country:41",
+								"typename": "Country"
+							},
+							"__typename": "Broadcaster"
+						},
+						"Country:41": {
+							"id": "41",
+							"nickname": "Switzerland",
+							"alpha_2": "CH",
+							"__typename": "Country"
+						},
+						"Participant:1571": {
+							"id": "1571",
+							"name": "John Lundvik",
+							"status": "published",
+							"slug": "john-lundvik",
+							"participations": [{
+								"type": "id",
+								"generated": false,
+								"id": "Participation:1796",
+								"typename": "Participation"
+							}],
+							"photo": {
+								"type": "id",
+								"generated": false,
+								"id": "Image:107973",
+								"typename": "Image"
+							},
+							"broadcaster": {
+								"type": "id",
+								"generated": false,
+								"id": "Broadcaster:16",
+								"typename": "Broadcaster"
+							},
+							"__typename": "Participant"
+						},
+						"Participation:1796": {
+							"id": "1796",
+							"round": {
+								"type": "id",
+								"generated": false,
+								"id": "EventRound:92",
+								"typename": "EventRound"
+							},
+							"__typename": "Participation"
+						},
+						"Image:107973": {
+							"id": "107973",
+							"path": "https://apex.eurovision.tv/image/e69cf0fd98d9d87e8e993373e04de236",
+							"description": "John Lundvik",
+							"__typename": "Image"
+						},
+						"Broadcaster:16": {
+							"id": "16",
+							"country": {
+								"type": "id",
+								"generated": false,
+								"id": "Country:210",
+								"typename": "Country"
+							},
+							"__typename": "Broadcaster"
+						},
+						"Country:210": {
+							"id": "210",
+							"nickname": "Sweden",
+							"alpha_2": "SE",
+							"__typename": "Country"
+						}
+					}
+				}
+			},
+			"asPath": "/participants",
+			"pathname": "/",
+			"query": {}
+		}
+	},
+	"page": "/",
+	"pathname": "/",
+	"query": {},
+	"buildId": "57a0e6f45c9d93de3b583aba7f847d6e6d98cef4",
+	"assetPrefix": "",
+	"nextExport": false,
+	"err": null,
+	"chunks": ["modules_home_7c50adfce0bf056b9ab503a49320d018"]
+}

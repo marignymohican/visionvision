@@ -12,7 +12,7 @@ import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import db
 
-cred = credentials.Certificate('work/visionvision-3af1d-firebase-adminsdk-z8evb-49eb93be14.json')
+cred = credentials.Certificate('work/visionvision-3af1d-firebase-adminsdk-j35e7-bc76d82a6e.json')
 default_app = firebase_admin.initialize_app(cred)
 
 #firebase_admin.db.Reference(**kwargs)
@@ -151,7 +151,10 @@ for p in eutvparticipants:
         participant[escyear]['song'] = pPage.find('span', attrs={'itemtype': 'http://schema.org/musicComposition'})
         if participant[escyear]['song'] is not None:
             participant[escyear]['song'] = participant[escyear]['song'].find('meta', attrs={'itemprop': 'name'})['content']
-        
+
+
+
+
         # update the json object for the local file
         participants.append(participant)
         
