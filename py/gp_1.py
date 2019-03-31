@@ -12,7 +12,7 @@ import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import db
 
-cred = credentials.Certificate('firebase.service.account.json')
+cred = credentials.Certificate('work/visionvision-3af1d-firebase-adminsdk-z8evb-49eb93be14.json')
 default_app = firebase_admin.initialize_app(cred)
 
 #firebase_admin.db.Reference(**kwargs)
@@ -185,7 +185,6 @@ for p in eutvparticipants:
             slack = requests.post('https://hooks.slack.com/services/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', data = json.dumps({'text': participant['name'] + ' has been added to the leaderboard!'}), headers = slackHeaders)
 
         # done with this participant
-        print(participant)
         print('-=-=-=-=-')
         print(' ')
     
