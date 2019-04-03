@@ -15,9 +15,10 @@
 /public/js/pre-git
 
 /py/bak
-/py/work
-/*.json
 /py/copypasta.py
+/py/work
+/py/*.json
+
 /whatwhat
 /.firebase
 .firebaserc

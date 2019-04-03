@@ -78,8 +78,6 @@ def makethumbnail(locImg, remImg):
     cardImg = cardImg.convert('RGB')
     cardImg.save(locImg + '_sc' + '.jpg', 'JPEG')  
 
-
-
 for p in eutvparticipants:
     if p.contents[0].name == 'a':
         print('-=-=-=-')
@@ -152,15 +150,6 @@ for p in eutvparticipants:
         if participant[escyear]['song'] is not None:
             participant[escyear]['song'] = participant[escyear]['song'].find('meta', attrs={'itemprop': 'name'})['content']
 
-        # <meta itemprop="award" content="place in theFirst Semi-Final of the Eurovision Song Contest in 2019">
-        participant[escyear]['award'] = pPage.find('meta', attrs={'itemprop': 'award'})['content']
-        if 'First Semi-Final' in participant[escyear]['award']:
-            participant[escyear]['award'] = 'first-semi-final'
-        elif 'Second Semi-Final' in participant[escyear]['award']:
-            participant[escyear]['award'] = 'second-semi-final'
-        else:
-            participant[escyear]['award'] = None
-
         # update the json object for the local file
         participants.append(participant)
         
@@ -169,6 +158,7 @@ for p in eutvparticipants:
         if len(dbPref) > 0: # check if a participant of this name already exists
             for item in dbPref:
                 if nodupe: # if there's more than one, we'll only keep this one
+                    nodupe = False
                     checkParti = dbParti.child(item).get()
                     
                     for value in participant[escyear]:
@@ -177,9 +167,8 @@ for p in eutvparticipants:
                                 slack = requests.post('https://hooks.slack.com/services/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', data = json.dumps({'text': 'Adding ' + value + ' to ' + participant['name'] + '!'}), headers = slackHeaders)
                             elif participant[escyear][value] != checkParti[escyear][value]:
                                 slack = requests.post('https://hooks.slack.com/services/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', data = json.dumps({'text': 'Updating ' + value + ' for ' + participant['name'] + '!'}), headers = slackHeaders)
-                    
+                    print(participant)
                     dbParti.child(item).update(participant)
-                    nodupe = False
                 else:
                     dbParti.child(item).delete()
         else:
