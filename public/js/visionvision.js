@@ -24,6 +24,16 @@ $(document).ready(function() {
             if ( sc_data[year].song ) { return '<h3>' + sc_data[year].song + '</h3>'; }
             else { return ''; }
         };
+        this.songOrder = function() {
+            if ( sc_data[year].bCast[voting.broadcast] ) {
+                var vb = sc_data[year].bCast[voting.broadcast];
+                if ( vb < 10 ) {
+                    vb = '0' + vb.toString();
+                }
+                return '<div class="songOrder">' + vb + '</div>';
+            }
+            else { return ''; }
+        };
         this.language = function() {
             if ( sc_data[year].language ) { return '<p class="language">(Sung in ' + sc_data[year].language + ')</p>'; }
             else { return ''; }
@@ -44,6 +54,7 @@ $(document).ready(function() {
                         ${this.song()}
                         ${this.language()}
                         ${this.artist()}
+                        ${this.songOrder()}
                     </div>
                 </div>`
             );
@@ -97,7 +108,6 @@ $(document).ready(function() {
 
             console.log('constructing the song chooser');
             pList.forEach(function(part) {
-                
                 let sc = $('<li />');
                 sc.append( new songcontainer(part,vvConfig.year).sc() );
                 sc.on('click',() => {
@@ -107,9 +117,10 @@ $(document).ready(function() {
                 $('#allthesongs').append(sc);
             });
             
+            // sort the songs by the running order
             $('#allthesongs li').sort(function(a,b) {
-                var va = $(a).find('.songcontainer').eq(0).attr('id'),
-                    vb = $(b).find('.songcontainer').eq(0).attr('id');
+                var va = Number($(a).find('.songOrder').text()),
+                    vb = Number($(b).find('.songOrder').text());
                 if ( va > vb ) { return 1; }
                 if ( va < vb ) { return -1; }
                 return 0;

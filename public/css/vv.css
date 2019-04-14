@@ -197,7 +197,7 @@ h2 {
     display: flex;
     border: 2px solid #022957;
     height: 100%;
-    text-align: center;
+    text-align: left;
     overflow: hidden;
 }
 #chooseUr10 .myvotes {
@@ -241,6 +241,9 @@ h2 {
 #myvotes #chooseUr10 li:last-child .vv_place::after {
     content: 'point';
 }
+#myvotes #chooseUr10 .songOrder {
+    display: none;
+}
 .vv_info {
     flex-grow: 2;
     display: inline-block;
@@ -253,12 +256,20 @@ h2 {
     position: relative;
 }
 .song {
+    background-color: #0C1330;
     color: #000;
+    text-align: left;
     text-shadow: 1px 1px #FFF, -1px 1px #FFF, -1px -1px #FFF, 1px -1px #FFF;    
 }
 .song h3 {
-    margin-top: 5px;
+    margin-left: 10px;
     font-size: 1.5em;
+}
+.song h4 {
+    margin-left: 10px;
+}
+.song h4 > span {
+    font-size: 0.75em;
 }
 .sAs {
     line-height: 4em;
@@ -307,10 +318,24 @@ h2 {
     color: #FFFFFF;
 }
 .songcontainer .song {
+    position: relative;
     flex-grow: 2;
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-size: contain;
+    background-position: right;
+}
+.songcontainer .song .songOrder {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    
+    padding: 5px 8px;
+    background-color: #000;
+    font-size: 1.6em;
+    font-weight: bold;
+    color: #FFFF00;
+    text-shadow: none;
+    
 }
 
 /* -=-=-=- song chooser panel -=-=-=- */
