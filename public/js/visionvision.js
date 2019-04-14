@@ -9,16 +9,11 @@ $(document).ready(function() {
         messagingSenderId: "821274017742"
     };
     firebase.initializeApp(fbconfig);
-    
-    const voting = {};
-    voting.whatyear = firebase.database().ref('/config/year');
-    voting.participants = firebase.database().ref('/participants');
-    voting.myvotes = firebase.database().ref('/voting_venues/mimis/votes');
-    voting.token = false;
-    
-    const whatyearisit = firebase.database().ref('/config/year');
+
+    //const whatyearisit = firebase.database().ref('/config/year');
     const dbParticipants = firebase.database().ref('/participants');
-    const dbMyVotes = firebase.database().ref('/voting_venues/mimis/votes');
+    const dbMyVotes = firebase.database().ref('/voting');
+    let voting = {};
 
     let votingtoken = false;
     let myvotes = [];
@@ -56,33 +51,55 @@ $(document).ready(function() {
     };
 
     if (storageAvailable('localStorage')) {
-        whatyearisit.once('value').then((data) => {
-            setthestage(data.val());
+
+        voting = firebase.database().ref('/config').once('value').then(function(snapshot) {
+            voting = snapshot.val();
+            voting.token = false;
+            
+            if ( voting.votestate === 'startvotingnow') {
+                setthestage(voting);
+            } else if ( voting.votestate === 'stopvotingnow' ) {
+                // display a message that voting is over
+                alert('voting is over for this broadcast');
+                
+                // tally up the venue votes and display the leaderboard
+                
+                // thank the good folk for their participation
+            } else {
+                alert('i don\'t know what\'s happening');
+            }
         });
+
     } else {
         alert('i was unable to set a storage variable :(\n\nperhaps try a different browser?');
     }
 
-    function setthestage(vv_year) {
-        console.log('building out the leaderboard for ' + vv_year);
-        // check for a previous voting token
+    function setthestage(vvConfig) {
+        console.log('building out the leaderboard for the ' + vvConfig.broadcast + ' ' + vvConfig.year);
+        
+        // check for a previous votes from this user
         console.log('checking for previous votes');
-        if ( !localStorage.getItem('vv_votingtoken') ) {
-            // no votingtoken exists
+        if ( localStorage.getItem('vv_votingtoken') ) {
+            votingtoken = localStorage.getItem('vv_votingtoken');            
+        } else {
             votingtoken = Math.ceil(Math.random() * 10000) + 'vv_dev' + Math.ceil(Math.random() * 10000);
             localStorage.setItem('vv_votingtoken', votingtoken);
-        } else {
-            // voting token exists
-            votingtoken = localStorage.getItem('vv_votingtoken');
         }
 
         // build the song chooser
         dbParticipants.once('value', function(pdata) {
+            // filter participants for the current broadcast
+            let pList = Object.values(pdata.val()).filter(function(p) {
+                if ( p[vvConfig.year].bCast ) {
+                    return vvConfig.broadcast in p[vvConfig.year].bCast;
+                }
+            });
+
             console.log('constructing the song chooser');
-            pdata.forEach(function(part) {
+            pList.forEach(function(part) {
                 
                 let sc = $('<li />');
-                sc.append( new songcontainer(part.val(),vv_year).sc() );
+                sc.append( new songcontainer(part,vvConfig.year).sc() );
                 sc.on('click',() => {
                     addsong(sc,pointsto);
                 });
@@ -97,16 +114,15 @@ $(document).ready(function() {
                 if ( va < vb ) { return -1; }
                 return 0;
             }).appendTo('#allthesongs');
-            
 
         }).then(function() {
             // this is the part to remember when folk may have already submitted votes
             dbMyVotes.child(votingtoken).once('value',function(myData) {
                 myvotes = myData.val();
             }).then(function() {
-                if ( myvotes ) {
+                if ( myvotes && myvotes[voting.broadcast] ) {
                     console.log('adding previous votes to my leaderboard');
-                    myvotes.forEach(function(myData) {
+                    myvotes[voting.broadcast].forEach(function(myData) {
                         let place = '#vv_place_' + myData.points;
                         let sc = '#sc_' + myData.name.toLowerCase().replace(/ /g,'_');
                         $(place).find('.myvotes .vv_info').html($(sc).clone());
@@ -118,15 +134,15 @@ $(document).ready(function() {
     }
     
     function venueLeaders(data) {
-        console.log(data.val());
+        console.log('building leaderboard');
 
         // build a new array of all votes
         let allVotes = data.val();
         let votetally = [];
-        
-        for ( let votes in allVotes ) {
-            if ( allVotes[votes] ) {
-                allVotes[votes].forEach(function(vote) {
+
+        for ( var votes in allVotes ) {
+            if ( allVotes[votes] && allVotes[votes][voting.broadcast] ) {
+                allVotes[votes][voting.broadcast].forEach(function(vote) {
                     let addme = false;
                     for ( let v = 0; v < votetally.length; v++ ) {
                         if ( votetally[v] && votetally[v].name == vote.name ) {
@@ -184,11 +200,12 @@ $(document).ready(function() {
     
     // submit your vote(s)
     $('#myvotes').on('click','#submitvote', function() {
-        let votingData = [];
-        
+        let votingData = {};
+        votingData[voting.broadcast] = [];
+
         $('#chooseUr10 li').each(function() {
             if ( $(this).find('.myvotes .songcontainer').length ) {
-                votingData.push({
+                votingData[voting.broadcast].push({
                     "name": $(this).find('.myvotes .songcontainer').attr('id').replace(/sc_/,''),
                     "points": $(this).attr('id').replace(/vv_place_/,'')
                 });
@@ -198,7 +215,7 @@ $(document).ready(function() {
         dbMyVotes.child(votingtoken).set(votingData);
         alert('Thanks!\n\nVote as often and as many times as you like, only the last time counts =-D');
     });
-    
+
     // clear my leader board
     $('#myvotes').on('click','#clearleaderboard', function() {
         $('#chooseUr10 li').each(function() {
@@ -231,7 +248,7 @@ $(document).ready(function() {
             $('#overlay #whatisthis').removeClass('notvisible');
             $('#overlay #songchooser').addClass('notvisible');
         }
-        $('body').addClass('noscroll');
+        //$('body').addClass('noscroll');
         $('#overlay').fadeIn(500, function() {
             $('#allthesongs').scrollTop(0);
         });
@@ -244,7 +261,7 @@ $(document).ready(function() {
             $('#overlay #meet_participants').removeClass('notvisible');
             $('#overlay #songchooser').addClass('notvisible');
         }
-        $('body').addClass('noscroll');
+        //$('body').addClass('noscroll');
         $('#overlay').fadeIn(500, function() {
             $('#allthesongs').scrollTop(0);
         });
@@ -280,7 +297,7 @@ $(document).ready(function() {
                 'width': '45%',
                 'height': '50px'
             }, 1000);
-            
+
             $('#chooseUr10 .songcontainer .song').fadeOut(500);
         
         // hide the full leaderboard
