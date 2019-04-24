@@ -25,6 +25,9 @@ h1 {
 h2 {
     font-size: 2em;
 }
+p {
+    margin-bottom: 5px;
+}
 .noscroll {
     overflow: hidden;
 }
@@ -272,7 +275,10 @@ h2 {
     font-size: 0.75em;
 }
 .sAs {
+    display: inline-block;
+    width: 100%;
     line-height: 4em;
+    text-align: center;
 }
 
 /* -=-=-=- The Song Container -=-=-=- */
@@ -324,11 +330,14 @@ h2 {
     background-size: contain;
     background-position: right;
 }
+.songcontainer .song h3,
+.songcontainer .song h4 {
+    width: calc(100% - 65px);
+}
 .songcontainer .song .songOrder {
     position: absolute;
     right: 0;
     bottom: 0;
-    
     padding: 5px 8px;
     background-color: #000;
     font-size: 1.6em;
@@ -342,7 +351,23 @@ h2 {
 #songchooser .sc_actions {
     display: flex;
     padding-top: 10px;
-    height: 100px;
+    margin-bottom: 15px;
+}
+#songchooser .sc_actions .sc_a_choose {
+    margin-left: 4px;
+    font-size: 1.1em;
+    text-align: left;
+}
+#songchooser .sc_actions .sc_a_choose .sc_a_points_points {
+    font-size: 1.1em;
+    font-weight: bold;
+
+}
+#songchooser .sc_actions .sc_a_choose .douze {
+    font-size: 1.25em;
+    font-weight: bold;
+    color: #FFC901;
+    text-shadow: 1px 1px 1px #000, 1px -1px 1px #000, -1px -1px 1px #000, -1px 1px 1px #000;
 }
 #songchooser #allthesongs {
     overflow: scroll;

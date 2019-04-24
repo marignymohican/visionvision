@@ -199,6 +199,18 @@ $(document).ready(function() {
     $('#myvotes').on('click','.myvotes',function() {
         pointsto = '#' + $(this).parent().attr('id');
 
+        let p = pointsto.replace(/#vv_place_/,'');
+        if ( Number(p) > 1 ) {
+            if ( Number(p) === 12 ) {
+                p = '<span class="sc_a_points_points douze">Douze Points!</span>';
+            } else {
+                p = '<span class="sc_a_points_points">' + p + '</span> points!';
+            }
+        } else {
+            p = '<span class="sc_a_points_points">1</span> point!';
+        }
+        $('#overlay #songchooser .sc_a_points').html(p);
+        
         if ( $('#overlay #songchooser').hasClass('notvisible') ) {
             $('#overlay #songchooser').removeClass('notvisible');
             $('#overlay #whatisthis').addClass('notvisible');
