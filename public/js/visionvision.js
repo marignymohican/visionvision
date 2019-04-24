@@ -224,18 +224,18 @@ $(document).ready(function() {
     // submit your vote(s)
     $('#myvotes').on('click','#submitvote', function() {
         let votingData = {};
-        votingData[voting.broadcast] = [];
+        votingData = [];
 
         $('#chooseUr10 li').each(function() {
             if ( $(this).find('.myvotes .songcontainer').length ) {
-                votingData[voting.broadcast].push({
+                votingData.push({
                     "name": $(this).find('.myvotes .songcontainer').attr('id').replace(/sc_/,''),
                     "points": $(this).attr('id').replace(/vv_place_/,'')
                 });
             }
         });
 
-        dbMyVotes.child(votingtoken).set(votingData);
+        dbMyVotes.child(votingtoken).child(voting.broadcast).set(votingData);
         alert('Thanks!\n\nVote as often and as many times as you like, only the last time counts =-D');
     });
 
