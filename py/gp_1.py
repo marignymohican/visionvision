@@ -150,6 +150,19 @@ for p in eutvparticipants:
         if participant[escyear]['song'] is not None:
             participant[escyear]['song'] = participant[escyear]['song'].find('meta', attrs={'itemprop': 'name'})['content']
 
+        # get the semifinal performance and running order here
+        with open('casts.2019.json', 'rb') as f:
+            casts = json.load(f)
+            for key in casts:
+                for place in casts[key]:
+                    print(place)
+                    print(key)
+                    print(casts[key])
+                    if participant['name'] in place:
+                        participant[escyear]['bCast'] = {}
+                        participant[escyear]['bCast'][key] = place.split('. ')[0]
+                                                     
+
         # update the json object for the local file
         participants.append(participant)
         
