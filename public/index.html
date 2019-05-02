@@ -17,7 +17,6 @@
     <script src="js/vv_ani.js"></script>
 </head>
 <body class="color2019-grad">
-    <!-- i made a change, i did it again -->
     <div id="header">
         <h1>Vision Vision</h1>
         <h2>
@@ -28,28 +27,23 @@
         </h2>
         <nav>
             <ul>
-                <li id="toggle_leaders" class="myvotes">View the Leaderboard</li>
-                <li id="whatisthis">What is all this?</li>
+                <li id="about_esc">The Contest</li>
+                <li id="about_ppants">The Participants</li>
+                <li id="about_vv">This App</li>
             </ul>
         </nav>
     </div>
     <div id="main">
-
-        <!-- Display the local leader board -->
-        <div id="allvotes" class="votingpanel">           
-            <h2>Current Leaderboard</h2>
-            <p>Results below are calculated in real-time across all participants at all venues.</p>
-            <p>Final scores will be displayed after the hosts have called for a stop to voting and all votes have been tabulated.</p>
-            <ul id="allLeaders">
-                <li>There's nothing to see here right now. I havent built this bit yet.</li>
-            </ul>
-        </div>
-        
         <!-- europe! start voting now! -->
         <div id="myvotes" class="votingpanel">
             <h2>Choose your top 10!</h2>
             <p>12 Points (douze points) to your most favorite, 10 the next most, 8 to the next, etc etc.</p>
-            <p></p>
+            <p>Update your vote as often as you like. Only the last one counts!</p>
+            
+            <div id="toggle_leaders">
+                <button class="justmyvotes">View the full leaderboard</button>
+            </div>
+            
             <ul id="chooseUr10">
                 <li id="vv_place_12">
                     <div class="chooseasong myvotes">
@@ -207,22 +201,18 @@
                     <div class="cw vv_button">x</div>
                 </div>
                 <div class="content">
-                    <h2>What's this all about?</h2>
-                    <p>The Eurovision Song Contest (ESC or just Eurovision) is a yearly, international song competition between members of the European Broadcasting Union. Each broadcaster internally chooses both a song and a performer to send to Eurovision, typically by a professional jury or a televised public vote (or both). <span class="smaller">More from <a href="https://eurovision.tv/history/in-a-nutshell" target="_blank">eurovision.tv</a></span></p>
-                    <p>Since voting in the Contest is only available to viewers in participating member countries, I've built this little application to allow fans in non-EBU nations to be able to hold their own, unofficial vote.</p>
-                    <h3>Its all for fun, folk! Numbers in this app are in no way connected to, nor will they reflect officially cast votes.</h3>
-                    <hr>
                     
-                    <div class="about_panel">
-                        <h4>About this application</h4>
-                        <ul>
-                            <li>what it do?</li>
-                            <li>how does it work?</li>
-                        </ul>
+                    <div id="about_vv_page" class="about_panel notvisible">
+                        <h4>What's this all about?</h4>
+                        <p>The Eurovision Song Contest (ESC or just Eurovision) is a yearly, international song competition between members of the European Broadcasting Union. Each broadcaster internally chooses both a song and a performer to send to Eurovision, typically (and certainly not always) by a professional jury or a televised public vote (or both). <span class="smaller">More from <a href="https://eurovision.tv/history/in-a-nutshell" target="_blank">eurovision.tv</a></span></p>
+                        <p>Since voting in the Contest is only available to viewers in participating member countries, I've built this little application to allow fans in non-EBU locations to be able to hold their own, unofficial vote.</p>
+                        <h3><a href="https://eurovision.tv/app">Go here to download the official Eurovision app</a></h3>
+                        <h3>Its all for fun, folk! Numbers in this app are in no way connected to, nor will they reflect officially cast votes.</h3>
                     </div>
 
-                    <div class="about_panel">
-                        <h4>More about Eurovision \/</h4>
+                    <div id="about_esc_page" class="about_panel notvisible">
+                        <h4>More about Eurovision</h4>
+                        <p>Here are the answers to some of the biggest FAQs I get. For more information, visit <a href="https://eurovision.tv/history/in-a-nutshell" target="_blank">the official Eurovision website</a>.</p>
                         <ul>
                             <li>The first Eurovision Song Contest was held in 1956 between 7 nations.</li>
                             <li>The Contest is (typically) hosted/broadcast/produced by the broadcaster from previous year's winner's country. <span class="smaller">The 2019 contest is in Tel Aviv and produced by <a href="https://www.kan.org.il/" target="_blank">KAN</a> as Israel won in 2018.</span></li>
@@ -234,7 +224,7 @@
                                     <li>10 + 10 + 5 + 1 = 26</li>
                                 </ul>
                             </li>
-                            <li>The Big Five are France, Germany, Italy, Spain, and the United Kingdom. General wisdom says they get a free pass to the grand final as they foot the lion's share of the funding for the entire show. (That's all i have to say about that)</li>
+                            <li>The Big Five are France, Germany, Italy, Spain, and the United Kingdom. Basically, they get a free pass to the grand final as they foot the lion's share of the funding for the production of the show. (That's all I have to say about that)</li>
                             <li><a href="https://en.wikipedia.org/wiki/List_of_languages_in_the_Eurovision_Song_Contest#Rule_changes" target="_blank">There is (currently) no "official" language to songs in Eurovision</a>
                                 <ul>
                                     <li>Previous years did have language restrictions</li>
@@ -246,16 +236,28 @@
                         </ul>
                     </div>
                     
+                    <div id="about_ppants_page" class="about_panel notvisible">
+                        <h4>Meet the Particpants</h4>
+                        <p>Get to know the participating acts in this year's Eurovision</p>
+                        <ul id="about_ppants_sort">
+                            <li>All</li>
+                            <li>Semi 1</li>
+                            <li>Semi 2</li>
+                            <li>Grand</li>
+                        </ul>
+                        <ul></ul>
+                    </div>
                     
                 </div>
             </div>
+
             <div id="songchooser">
                 <div class="sc_actions">
                     <!-- <div class="moreinfo">Giving <span id="sc_givepoints"></span> points to:</div>-->
-                    <div class="sc_a_choose">Choose a song below to award <span class="sc_a_points">##</span></div>
                     <div class="clearthis vv_button">Clear&nbsp;this&nbsp;selection</div>
                     <div class="cw vv_button">x</div>
                 </div>
+                <div class="sc_a_choose">Choose a song below to award <span class="sc_a_points">##</span></div>
                 <ul id="allthesongs"></ul>
             </div>
         </div>

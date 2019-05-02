@@ -51,10 +51,12 @@ $(document).ready(function() {
                         <div class="f_text">${this.name}</div>
                     </div>
                     <div class="song" style="background-image: url('https://rayknola.com/visionvision/public/img/participants/${year}/${this.sName}_sc.jpg');">
-                        ${this.song()}
-                        ${this.language()}
-                        ${this.artist()}
-                        ${this.songOrder()}
+                        <div class="sc_info">
+                            ${this.song()}
+                            ${this.language()}
+                            ${this.artist()}
+                            ${this.songOrder()}
+                        </div>
                     </div>
                 </div>`
             );
@@ -125,7 +127,12 @@ $(document).ready(function() {
                 if ( va < vb ) { return -1; }
                 return 0;
             }).appendTo('#allthesongs');
-
+            console.log('song chooser constructed');
+            
+            // build the participant info panel
+            
+            
+            
         }).then(function() {
             // this is the part to remember when folk may have already submitted votes
             dbMyVotes.child(votingtoken).once('value',function(myData) {
@@ -140,6 +147,7 @@ $(document).ready(function() {
                     }); 
                 }
                 $('#main #myvotes').fadeIn(500);
+                console.log('previous votes added');
             });
         });
     }
@@ -196,7 +204,7 @@ $(document).ready(function() {
 
 // -=-=-=- CLICK EVENTS -=-=-=-
     // pop up the song chooser, identify the position to add a song to
-    $('#myvotes').on('click','.myvotes',function() {
+    $('#chooseUr10').on('click','.myvotes',function() {
         pointsto = '#' + $(this).parent().attr('id');
 
         let p = pointsto.replace(/#vv_place_/,'');
@@ -236,6 +244,8 @@ $(document).ready(function() {
         });
 
         dbMyVotes.child(votingtoken).child(voting.broadcast).set(votingData);
+        
+        // change this to a modal with some animation
         alert('Thanks!\n\nVote as often and as many times as you like, only the last time counts =-D');
     });
 
@@ -263,28 +273,14 @@ $(document).ready(function() {
 
     
 // display info pages
-    
     // view more info on the eurovision
-    $('nav').on('click', '#whatisthis', function() {
-        
+    $('#header nav').on('click', 'li', function() {
+        $('#whatisthis .about_panel').addClass('notvisible');
+        $('#whatisthis #' + $(this).attr('id') + '_page').removeClass('notvisible');
         if ( $('#overlay #whatisthis').hasClass('notvisible') ) {
             $('#overlay #whatisthis').removeClass('notvisible');
             $('#overlay #songchooser').addClass('notvisible');
         }
-        //$('body').addClass('noscroll');
-        $('#overlay').fadeIn(500, function() {
-            $('#allthesongs').scrollTop(0);
-        });
-    });
-    
-    // view more info on the participants
-    $('nav').on('click', '#meet_participants', function() {
-        alert('poop!');
-        if ( $('#overlay #meet_participants').hasClass('notvisible') ) {
-            $('#overlay #meet_participants').removeClass('notvisible');
-            $('#overlay #songchooser').addClass('notvisible');
-        }
-        //$('body').addClass('noscroll');
         $('#overlay').fadeIn(500, function() {
             $('#allthesongs').scrollTop(0);
         });
@@ -292,12 +288,13 @@ $(document).ready(function() {
 // display info pages
 
     // view the full leaderboard
-    $('nav').on('click', '#toggle_leaders', function() {
+    $('#toggle_leaders').on('click', 'button', function() {
         // dbMyVotes
+        let button = $(this);
 
         // show the full leaderboard
-        if ( $(this).hasClass('myvotes') ) {
-            $(this).removeClass('myvotes').text('Hide the Leaderboard');
+        if ( button.hasClass('justmyvotes') ) {
+            button.removeClass('justmyvotes').text('Hide the Leaderboard');
             $('#chooseUr10').addClass('allvotes');
             
             dbMyVotes.on('value', (data) => venueLeaders(data) );
@@ -325,7 +322,7 @@ $(document).ready(function() {
         
         // hide the full leaderboard
         } else {
-            $(this).addClass('myvotes').text('View the Leaderboard');
+            button.addClass('justmyvotes').text('View the Leaderboard');
             $('#chooseUr10').removeClass('allvotes');
             
             dbMyVotes.off();
