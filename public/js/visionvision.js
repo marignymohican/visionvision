@@ -24,6 +24,7 @@ $(document).ready(function() {
             if ( sc_data[year].song ) { return '<h3>' + sc_data[year].song + '</h3>'; }
             else { return ''; }
         };
+        this.bCast = Object.keys(sc_data[year].bCast);
         this.songOrder = function() {
             if ( sc_data[year].bCast[voting.broadcast] ) {
                 var vb = sc_data[year].bCast[voting.broadcast];
@@ -45,7 +46,7 @@ $(document).ready(function() {
         
         this.sc = function() {
             return (
-                `<div id="sc_${this.sName}" class="songcontainer">
+                `<div id="sc_${this.sName}" class="songcontainer" vv_bCasts="${this.bCast}">
                     <div class="flag">
                         <img src="./img/flags/${this.sName}.png" />
                         <div class="f_text">${this.name}</div>
@@ -121,7 +122,7 @@ $(document).ready(function() {
             
             // sort the songs by the running order
             $('#allthesongs li').sort(function(a,b) {
-                var va = Number($(a).find('.songOrder').text()),
+                let va = Number($(a).find('.songOrder').text()),
                     vb = Number($(b).find('.songOrder').text());
                 if ( va > vb ) { return 1; }
                 if ( va < vb ) { return -1; }
@@ -130,9 +131,49 @@ $(document).ready(function() {
             console.log('song chooser constructed');
             
             // build the participant info panel
-            
-            
-            
+            let ppants = pdata.val();
+            for ( let part in ppants ) {
+                if ( ppants[part][vvConfig.year].bCast) {
+                
+                    let sc = $('<li />');
+                    sc.append( new songcontainer(ppants[part],vvConfig.year).sc() );
+                    sc.on('click',() => {
+
+                        let p = sc.find('h4').text().toLowerCase()
+                            .replace(/performed by /,'')
+                            .replace(/ /g,'-')
+                        // 2019 urls we gotta look out for
+                        // https://eurovision.tv/participant/pænda
+                            .replace(/æn/,'ae')
+                        // https://eurovision.tv/participant/darude-feat.-sebastian-rejman
+                            .replace(/-feat.-sebastian-rejman/,'')
+                        // https://eurovision.tv/participant/joci-p%C3%A1pai
+                            .replace(/joci-pápai/,'joci-papai-2019')
+                        // https://eurovision.tv/participant/jurij-veklenko
+                            .replace(/jurij-veklenko/,'jurijus')
+                        // https://eurovision.tv/participant/michela
+                            .replace(/michela/,'michela-pace')
+                        // https://eurovision.tv/participant/d-mol
+                            .replace(/d-mol/,'d-moll')
+                        // https://eurovision.tv/participant/
+                            .replace(/luca-hänni/,'luca-haenni')
+                        // https://eurovision.tv/participant/
+                            .replace(/nevena-božović/,'nevena-bozovic')
+                        // https://eurovision.tv/participant/zala-kralj-&-ga%C5%A1per-%C5%A1antl
+                            .replace(/zala-kralj-&-gašper-šantl/,'zala-kralj-gasper-santl');
+                        window.open('https://eurovision.tv/participant/' + p);
+                    });
+                    $('#about_ppants_list').append(sc);
+                }
+            }
+            $('#about_ppants_list li').sort(function(a,b) {
+                let va = $(a).find('.songcontainer').attr('id'),
+                    vb = $(b).find('.songcontainer').attr('id');
+                if ( va > vb ) { return 1; }
+                if ( va < vb ) { return -1; }
+                return 0;
+            }).appendTo('#about_ppants_list');
+
         }).then(function() {
             // this is the part to remember when folk may have already submitted votes
             dbMyVotes.child(votingtoken).once('value',function(myData) {
@@ -284,6 +325,27 @@ $(document).ready(function() {
         $('#overlay').fadeIn(500, function() {
             $('#allthesongs').scrollTop(0);
         });
+    });
+    
+    // particpants sorter
+    $('#about_ppants_sort').on('click', 'li', function() {
+        $('#about_ppants_sort li').removeClass('pp_view');
+        $(this).addClass('pp_view');
+        
+        
+        let showCasts = $(this).text().toLowerCase().replace(/ /g,'');
+        if ( showCasts === 'all' ) {
+            $('#about_ppants_list .songcontainer').closest('li').animate({height: '150px'});
+        } else {
+            $('#about_ppants_list .songcontainer').each(function() {
+                let songCasts = $(this).attr('vv_bcasts');
+                if ( songCasts.indexOf(showCasts) < 0 ) {
+                    $(this).closest('li').animate({height: 0});
+                } else {
+                    $(this).closest('li').animate({height: '150px'});
+                }
+            });
+        }
     });
 // display info pages
 

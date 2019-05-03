@@ -453,3 +453,87 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0c1330', end
 #viewleaders {
     margin-bottom: 0.85em;
 }
+
+/* -=-=-=- participants page -=-=-=- */
+#overlay #overlay_content #whatisthis #about_ppants_sort {
+    display: flex;
+    margin-bottom: 0;
+    margin-left: 0;
+    list-style-type: none;
+    font-size: 1.5em;
+}
+#overlay #overlay_content #whatisthis #about_ppants_sort li {
+    display: inline-block;
+    padding: 5px 0 5px;
+    margin-bottom: 0;
+    border: 1px solid #AAA;
+    background-color: #022957;
+    flex-grow: 1;
+    font-weight: bold;
+    text-align: center;
+    color: #DDD;
+}
+#overlay #overlay_content #whatisthis #about_ppants_sort li:hover,
+#overlay #overlay_content #whatisthis #about_ppants_sort li:active {
+    background-color: #004b9b;
+    color: #AAA;
+}
+#overlay #overlay_content #whatisthis #about_ppants_sort li.pp_view {
+    background-color: #3a70aa;
+}
+
+#overlay #overlay_content #whatisthis #about_ppants_list {
+    list-style-type: none;
+    margin-left: 0;
+}
+#overlay #overlay_content #whatisthis #about_ppants_list li {
+    position: relative;
+    margin-bottom: 0;
+    height: 150px;
+    overflow: hidden;
+}
+#overlay #overlay_content #whatisthis #about_ppants_list .flag {
+    float: left;
+    z-index: 1505;
+    width: 65px;
+    height: 65px;
+    font-size: 0.75em;
+}
+#overlay #overlay_content #whatisthis #about_ppants_list .song {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index:1500;
+    height: 150px;
+    width: 100%;
+    border-bottom: 1px solid #FFF;
+    background-size: cover;
+}
+#overlay #overlay_content #whatisthis #about_ppants_list .song .sc_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 0;
+    background: rgba(12,19,48,0.2);
+    font-size: 1em;
+}
+#overlay #overlay_content #whatisthis #about_ppants_list .song h3,
+#overlay #overlay_content #whatisthis #about_ppants_list .song h4 {
+    margin-left: 70px;
+    margin-bottom: 0;
+    font-size: 1.5em;
+    text-align: center;
+}
+#overlay #overlay_content #whatisthis #about_ppants_list .song h4 span {
+    display: block;
+    font-size: 0.45em;
+}
+#overlay #overlay_content #whatisthis #about_ppants_list .song h3:before {
+    content: "\"";
+}
+#overlay #overlay_content #whatisthis #about_ppants_list .song h3:after {
+    content: "\"";
+}
+#overlay #overlay_content #whatisthis #about_ppants_list .song .songOrder {
+    display: none;
+}
