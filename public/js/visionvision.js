@@ -1,4 +1,6 @@
 $(document).ready(function() {
+    $('#setthestage').fadeIn(500);
+
     // Initialize Firebase
     const fbconfig = {
         apiKey: "AIzaSyAcqy5-9jdnUmq16cn9sL5K8jOGWJUZyHw",
@@ -181,12 +183,14 @@ $(document).ready(function() {
             }).then(function() {
                 if ( myvotes && myvotes[voting.broadcast] ) {
                     console.log('adding previous votes to my leaderboard');
+                    console.log(myvotes);
                     myvotes[voting.broadcast].forEach(function(myData) {
                         let place = '#vv_place_' + myData.points;
                         let sc = '#sc_' + myData.name.toLowerCase().replace(/ /g,'_');
                         $(place).find('.myvotes .vv_info').html($(sc).clone());
                     }); 
                 }
+                $('#main #setthestage').remove();
                 $('#main #myvotes').fadeIn(500);
                 console.log('previous votes added');
             });
@@ -245,8 +249,8 @@ $(document).ready(function() {
 
 // -=-=-=- CLICK EVENTS -=-=-=-
     // pop up the song chooser, identify the position to add a song to
-    $('#chooseUr10').on('click','.myvotes',function() {
-        pointsto = '#' + $(this).parent().attr('id');
+    $('#chooseUr10').on('click','li',function() {
+        pointsto = '#' + $(this).attr('id');
 
         let p = pointsto.replace(/#vv_place_/,'');
         if ( Number(p) > 1 ) {
@@ -271,7 +275,7 @@ $(document).ready(function() {
     });
     
     // submit your vote(s)
-    $('#myvotes').on('click','#submitvote', function() {
+    $('#submitvotes').on('click', function() {
         let votingData = {};
         votingData = [];
 
@@ -287,18 +291,24 @@ $(document).ready(function() {
         dbMyVotes.child(votingtoken).child(voting.broadcast).set(votingData);
         
         // change this to a modal with some animation
-        alert('Thanks!\n\nVote as often and as many times as you like, only the last time counts =-D');
+        //alert('Thanks!\n\nVote as often and as many times as you like, only the last time counts =-D');
+        $('#thanxforvoting').fadeIn(500).delay(3000).fadeOut(500);
+    });
+    $('#thanxforvoting').on('click',function() {
+        $(this).fadeOut(1000);
     });
 
     // clear my leader board
-    $('#myvotes').on('click','#clearleaderboard', function() {
-        $('#chooseUr10 li').each(function() {
-            $(this).find('.myvotes .vv_info').html('<span class="sAs">Select a song!</span>');
-        });
-        
-        dbMyVotes.child(votingtoken).set(null);
-        
-        alert('All votes have been removed');
+    $('#clearvotes').on('click', function() {
+        if ( confirm('This cannot be undone') ) {
+            $('#chooseUr10 li').each(function() {
+                $(this).find('.myvotes .vv_info').html('<span class="sAs">Select a song!</span>');
+            });
+            
+            dbMyVotes.child(votingtoken).set(null);
+            
+            alert('Your votes have been cleared');
+        }
     });
 
     // clear just this vote
@@ -350,7 +360,7 @@ $(document).ready(function() {
 // display info pages
 
     // view the full leaderboard
-    $('#toggle_leaders').on('click', 'button', function() {
+    $('#fullleaderboard').on('click', function() {
         // dbMyVotes
         let button = $(this);
 
@@ -379,6 +389,7 @@ $(document).ready(function() {
                 'width': '45%',
                 'height': '50px'
             }, 1000);
+            $('#myvotes h2 > span:last-child').fadeIn(1000);
 
             $('#chooseUr10 .songcontainer .song').fadeOut(500);
         
@@ -406,6 +417,7 @@ $(document).ready(function() {
                 'border-width': '0',
                 'width': '0'
             },1000);
+            $('#myvotes h2 > span:last-child').fadeOut(1000);
             
             $('#chooseUr10 .songcontainer .song').fadeIn(500);
         }

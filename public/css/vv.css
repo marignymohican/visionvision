@@ -6,7 +6,6 @@
     font-family: Rubik,sans-serif;
 }
 body { /* default colors below refer to 2018 branding */
-    position: relative;
     /*min-width: 100vw;*/
     min-height: 100vh;
     background-attachment: fixed;
@@ -23,7 +22,8 @@ h1 {
     font-size: 3em;
 }
 h2 {
-    font-size: 2em;
+    margin-bottom: 15px;
+    font-size: 1.65em;
 }
 h3 {
     margin-bottom: 0.8em;
@@ -31,9 +31,16 @@ h3 {
 p {
     margin-bottom: 5px;
 }
+p.bold {
+    font-size: 1.15em;
+    font-weight: bold;
+}
 .noscroll {
     overflow: hidden;
 }
+
+.menu
+
 
 /* START branding and color information by year (default is 2018) */
 /* 2019 Tel Aviv */
@@ -169,15 +176,53 @@ p {
 #header nav ul li:active {
     color: #BBB;
 }
-#header nav ul li:first-child {
-    border-radius: 0 0 0 8px;
-}
-#header nav ul li:last-child {
-    border-radius: 0 0 8px 0;
-}
 #main {
     margin: 0 auto;
     max-width: 500px;
+}
+#main > p {
+    margin: 0 10px 4px;
+    color: whitesmoke;
+}
+#main #setthestage {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+#main #setthestage #sts_content {
+    margin-top: 20%;
+    text-align: center;
+    font-size: 2em;
+}
+#main #setthestage #sts_content img {
+    width: 100%;
+}
+
+.menu {
+    display: flex;
+    margin-bottom: 0;
+    margin-left: 0;
+    list-style-type: none;
+    font-size: 1.5em;
+}
+.menu li {
+    display: inline-block;
+    padding: 5px 0 5px;
+    margin-bottom: 0;
+    border: 1px solid #AAA;
+    background-color: #022957;
+    flex-grow: 1;
+    font-weight: bold;
+    text-align: center;
+    color: #DDD;
+}
+.menu li:hover,
+.menu li:active {
+    background-color: #004b9b;
+    color: #AAA;
+}
+.menu li.pp_view {
+    background-color: #3a70aa;
 }
 
 
@@ -186,12 +231,23 @@ p {
     display: none;
     margin: 20px 0 50px;
 }
+.votingpanel h2 {
+    display: flex;
+}
+.votingpanel h2 > span {
+    display: inline-block;
+    height: 1em;
+    width: 50%;
+}
+.votingpanel h2 > span:last-child {
+    display: none;
+    padding-left: 8px;
+}
 /* end this section */
-
 
 /* -=-=-=-=- LEADERBOARD STYLES -=-=-=-=- */
 #chooseUr10 {
-    margin: 0 0 25px;
+    margin: 0 0 90px;
     list-style-type: none;
 }
 #chooseUr10 li {
@@ -244,6 +300,9 @@ p {
     content: 'points';
     font-size: 0.4em;
     line-height: 0.5em;
+}
+#myvotes > h2 {
+    color: #FFF;
 }
 #myvotes > h2, #myvotes > p {
     padding: 0 8px;
@@ -382,6 +441,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0c1330', end
 }
 
 /* -=-=-=- song chooser panel -=-=-=- */
+#songchooser {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
 #songchooser .sc_actions {
     display: flex;
     padding-top: 10px;
@@ -396,7 +460,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0c1330', end
 #songchooser .sc_a_choose .sc_a_points_points {
     font-size: 1.1em;
     font-weight: bold;
-
 }
 #songchooser .sc_a_choose .douze {
     font-size: 1.25em;
@@ -407,10 +470,33 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0c1330', end
 #songchooser #allthesongs {
     overflow: scroll;
     height: calc(100vh - 100px);
+    cursor: pointer;
 }
 #songchooser #allthesongs li {
     margin-bottom: 0.5em;
     height: 90px;
+}
+/* -=-=-=- thanx for voting! -=-=-=- */
+#thanxforvoting {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0,0,0,0.5);
+}
+#thanxforvoting .words {
+    margin: 40% 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #FFF;
+}
+#thanxforvoting .words h3 {
+    font-size: 1.5em;
 }
 
 /* -=-=-=- voting buttons -=-=-=- */
@@ -432,9 +518,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0c1330', end
 .vv_button:active {
     border: 1px solid #FFC901;
     background-color: #DDB932;
-}
-.vv_button#submitvote {
-    font-size: 2em;
 }
 .vv_button#clearleaderboard {
     margin-top: 15px;
@@ -536,4 +619,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0c1330', end
 }
 #overlay #overlay_content #whatisthis #about_ppants_list .song .songOrder {
     display: none;
+}
+
+/* FOOTER */
+footer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 750;
+}
+footer ul {
+    cursor: pointer;
+    position: fixed;
+    bottom: 0;
+    left: 0;
 }
