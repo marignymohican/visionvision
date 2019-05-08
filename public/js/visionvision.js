@@ -192,7 +192,9 @@ $(document).ready(function() {
                 }
                 $('#main #setthestage').remove();
                 $('#main #myvotes').fadeIn(500);
+                $('footer').fadeIn(500);
                 console.log('previous votes added');
+                console.log('the stage is set');
             });
         });
     }

@@ -623,6 +623,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0c1330', end
 
 /* FOOTER */
 footer {
+    display: none;
     position: absolute;
     top: 0;
     left: 0;
