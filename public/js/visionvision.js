@@ -75,12 +75,22 @@ $(document).ready(function() {
             if ( voting.votestate === 'startvotingnow') {
                 setthestage(voting);
             } else if ( voting.votestate === 'stopvotingnow' ) {
-                // display a message that voting is over
-                alert('voting is over for this broadcast');
-                
-                // tally up the venue votes and display the leaderboard
-                
-                // thank the good folk for their participation
+                let bCast = voting.broadcast;
+                if ( Number(bCast.charAt(4)) ) {
+                    if ( bCast.charAt(4) === 1 ) {
+                        bCast = '1st Semi';
+                    } else {
+                        bCast = '2nd Semi';
+                    }
+                } else {
+                    bCast = 'Grand';
+                }
+
+                $('footer').remove();
+                $('#chooseUr10').off();
+                $('#main > p').html(`Thanx for particpating!<br /><br />Voting for this year's ${bCast} Final has ended. Results below are our final scores!`);
+                setthestage(voting);
+                toggleLeaders(true);
             } else {
                 alert('i don\'t know what\'s happening');
             }
@@ -369,6 +379,16 @@ $(document).ready(function() {
         // show the full leaderboard
         if ( button.hasClass('justmyvotes') ) {
             button.removeClass('justmyvotes').text('Hide the Leaderboard');
+            toggleLeaders(true);
+        // hide the full leaderboard
+        } else {
+            button.addClass('justmyvotes').text('View the Leaderboard');
+            toggleLeaders();
+        }
+    });
+    function toggleLeaders(view) {
+        if (view) {
+            // show the leaderboard
             $('#chooseUr10').addClass('allvotes');
             
             dbMyVotes.on('value', (data) => venueLeaders(data) );
@@ -394,10 +414,8 @@ $(document).ready(function() {
             $('#myvotes h2 > span:last-child').fadeIn(1000);
 
             $('#chooseUr10 .songcontainer .song').fadeOut(500);
-        
-        // hide the full leaderboard
         } else {
-            button.addClass('justmyvotes').text('View the Leaderboard');
+            // hide the leaderboard
             $('#chooseUr10').removeClass('allvotes');
             
             dbMyVotes.off();
@@ -423,7 +441,7 @@ $(document).ready(function() {
             
             $('#chooseUr10 .songcontainer .song').fadeIn(500);
         }
-    }); 
+    }
 
 // -=-=-=-=- MISC
     function storageAvailable(type) {
